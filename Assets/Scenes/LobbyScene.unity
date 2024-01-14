@@ -919,7 +919,7 @@ MonoBehaviour:
     - {fileID: 1789570279280792, guid: 056f556e83717d945b2b7303930ae56c, type: 3}
   _playerController:
     _wallet:
-      _goldAmount: 10000
+      _goldAmount: 100000
       _gemsAmount: 100
   _firstFreeHeroName: NoWeapon01
 --- !u!4 &212093960
