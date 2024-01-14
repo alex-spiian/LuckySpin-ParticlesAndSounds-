@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class UILobbySceneView : MonoBehaviour
 {
-    
+    // aleksandr branch
     [SerializeField] private TextMeshProUGUI _heroName;
     [SerializeField] private TextMeshProUGUI _heroLvl;
     [SerializeField] private TextMeshProUGUI _heroExperience;
