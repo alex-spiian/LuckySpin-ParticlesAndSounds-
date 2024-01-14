@@ -46,15 +46,13 @@ public class UISelectHeroSceneView : MonoBehaviour
 
         var currentHero = GameController.Instance.GetCurrentHero;
 
-        if (!GameController.Instance.IsCurrentHeroBought(currentHero))
+        if (PlayerPrefs.GetString(currentHero.Name) != "true")
         {
-            
             _buyHeroButton.gameObject.SetActive(true);
             _selectHeroButton.interactable = false;
         }
         else
         {
-
             _buyHeroButton.gameObject.SetActive(false);
             _selectHeroButton.interactable = true;
         }

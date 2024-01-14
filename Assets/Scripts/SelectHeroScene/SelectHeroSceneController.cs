@@ -51,13 +51,13 @@ public class SelectHeroSceneController : MonoBehaviour
     
     public void SelectHero()
     {
-        GameController.Instance.LastSelectedHeroIndex = GameController.Instance.CurrentHeroIndex;
+        PlayerPrefs.SetInt("LastSelectedHero", PlayerPrefs.GetInt("CurrentHero"));
         _sceneController.LoadLobbyScene();
     }
 
     public void BackToLobbyScene()
     {
-        GameController.Instance.CurrentHeroIndex = GameController.Instance.LastSelectedHeroIndex;
+        PlayerPrefs.SetInt("CurrentHero", PlayerPrefs.GetInt("LastSelectedHero"));
         _sceneController.LoadLobbyScene();
     }
 

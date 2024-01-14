@@ -17,7 +17,7 @@ namespace Spin
 
         public void UpdateSpinsCount()
         {
-            _spinsCount.text = "x " + GameController.Instance.GetPlayersSpinsCount;
+            _spinsCount.text = "x " + PlayerPrefs.GetInt("Spins");
         }
     }
 }

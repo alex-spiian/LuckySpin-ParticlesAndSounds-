@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class ChestAnimationsController : MonoBehaviour
 {
 
-    public event Action<int, int, int, int> OnChestOpened;
+    public event Action OnChestOpened;
     public event Action OnChestClosed;
 
 
@@ -20,13 +20,10 @@ public class ChestAnimationsController : MonoBehaviour
     [SerializeField] private Button _claimButton;
     [SerializeField] private Button _openChestButton;
     [SerializeField] private Canvas _chestCanvas;
-    [SerializeField] private PrizeCardsController _prizeCardsController;
-
-    private int _spinsCount;
-
+    
     public void ChestToTheMiddle()
     {
-        if (_spinsCount == 0)
+        if (PlayerPrefs.GetInt("Spins") == 0)
         {
             _chestCanvas.sortingOrder = 4;
             _openChestButton.interactable = true;
@@ -40,8 +37,7 @@ public class ChestAnimationsController : MonoBehaviour
     public void OpenChest()
     {
         _audioSource.Play();
-        OnChestOpened?.Invoke(_prizeCardsController.GetGoldCount(), _prizeCardsController.GetGemsCount(), 
-            _prizeCardsController.GetLifeCount(), _prizeCardsController.GetMysteryCardsCount());
+        OnChestOpened?.Invoke();
         
         _darkScreenMode.SwitchDarkModeOn();
         _claimButton.gameObject.SetActive(true);
@@ -72,9 +68,7 @@ public class ChestAnimationsController : MonoBehaviour
 
     public void SetNewSpinsValue()
     {
-        _spinsCount = (int)GameController.Instance.GetPlayersSpinsCount;
-
-        _chestAnimator.SetInteger(GlobalConstants.CHEST_ANIM_SPINS_COUNT_TRIGGER_NAME, _spinsCount);
+        _chestAnimator.SetInteger(GlobalConstants.CHEST_ANIM_SPINS_COUNT_TRIGGER_NAME, PlayerPrefs.GetInt("Spins"));
     }
 
     

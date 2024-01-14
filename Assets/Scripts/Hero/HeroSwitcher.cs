@@ -20,21 +20,23 @@ namespace DefaultNamespace.Hero
         {
             var availableHeroesCount = GameController.Instance.GetHeroesCount;
             
-            if (GameController.Instance.CurrentHeroIndex + 1 >= availableHeroesCount) return;
+            if (PlayerPrefs.GetInt("CurrentHero")+ 1 >= availableHeroesCount) return;
         
             Destroy(_currentHero);
+
+            PlayerPrefs.SetInt("CurrentHero", PlayerPrefs.GetInt("CurrentHero")+1);
             
-            GameController.Instance.CurrentHeroIndex++;
             ShowCurrentHero();
             OnHeroChanged?.Invoke();
         }
 
         public void PreviousHero()
         {
-            if (GameController.Instance.CurrentHeroIndex <= 0) return;
+            if (PlayerPrefs.GetInt("CurrentHero") <= 0) return;
         
             Destroy(_currentHero);
-            GameController.Instance.CurrentHeroIndex--;
+            PlayerPrefs.SetInt("CurrentHero", PlayerPrefs.GetInt("CurrentHero")-1);
+            
             ShowCurrentHero();
             OnHeroChanged?.Invoke();
         }

@@ -12,7 +12,19 @@ public class LobbySceneController : MonoBehaviour
     
     private void Awake()
     {
-        if (GameController.Instance.GetPlayersSpinsCount == 0)
+        
+        if (PlayerPrefs.GetInt("RunsCount", 0) == 0)
+        {
+            GameController.Instance.GetPlayerController.SetDefaultInformation();
+            PlayerPrefs.SetInt("RunsCount", 1);
+            PlayerPrefs.Save();
+        }
+        else
+        {
+            GameController.Instance.GetPlayerController.LoadSavedInformation();
+        }
+        
+        if (PlayerPrefs.GetInt("Spins") == 0)
         {
             _dayliGiftButton.SetActive(false);
         }
