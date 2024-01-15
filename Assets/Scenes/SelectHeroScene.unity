@@ -2738,6 +2738,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1948083643}
+        m_TargetAssemblyTypeName: DefaultNamespace.SceneController.SceneController,
+          Assembly-CSharp
+        m_MethodName: LoadLobbyScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &918074124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3300,6 +3313,19 @@ MonoBehaviour:
       - m_Target: {fileID: 1976036066}
         m_TargetAssemblyTypeName: SelectHeroSceneController, Assembly-CSharp
         m_MethodName: SelectHero
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1948083643}
+        m_TargetAssemblyTypeName: DefaultNamespace.SceneController.SceneController,
+          Assembly-CSharp
+        m_MethodName: LoadLobbyScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5443,6 +5469,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1948083643}
+        m_TargetAssemblyTypeName: DefaultNamespace.SceneController.SceneController,
+          Assembly-CSharp
+        m_MethodName: LoadLobbyScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1976036066}
         m_TargetAssemblyTypeName: SelectHeroSceneController, Assembly-CSharp
         m_MethodName: BackToLobbyScene
@@ -6681,7 +6720,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _uiSelectHeroSceneView: {fileID: 1984992223}
   _heroSwitcher: {fileID: 1412683821}
-  _sceneController: {fileID: 1948083643}
   _moneyView: {fileID: 265029848}
 --- !u!1 &1984992222
 GameObject:
@@ -6712,16 +6750,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51e92c56052414ba29599543f67e7563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthValue: {fileID: 1175200167}
-  _attackValue: {fileID: 1794928465}
-  _defenceValue: {fileID: 492090217}
-  _speedValue: {fileID: 1393698034}
-  _heroNameLabel: {fileID: 1756522542}
-  _heroWeaponLabel: {fileID: 61216372}
-  _heroPriceLabel: {fileID: 13914792}
-  _heroExperienceLabel: {fileID: 617687141}
-  _heroLevelLabel: {fileID: 1815711578}
-  _heroTypeImage: {fileID: 806299852}
+  _heroInformationView:
+    _heroNameLabel: {fileID: 1756522542}
+    _heroWeaponLabel: {fileID: 61216372}
+    _heroPriceLabel: {fileID: 13914792}
+    _heroExperienceLabel: {fileID: 617687141}
+    _heroLevelLabel: {fileID: 1815711578}
+    _heroTypeImage: {fileID: 806299852}
+  _heroStatsView:
+    _healthValue: {fileID: 1175200167}
+    _attackValue: {fileID: 1794928465}
+    _defenceValue: {fileID: 492090217}
+    _speedValue: {fileID: 1393698034}
   _buyHeroButton: {fileID: 1816056901}
   _selectHeroButton: {fileID: 1026064907}
 --- !u!4 &1984992224

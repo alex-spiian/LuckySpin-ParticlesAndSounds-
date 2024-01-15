@@ -916,8 +916,8 @@ MonoBehaviour:
     - {fileID: 1938047842842718, guid: e43a414ef8c04124b94fc653e5fd713b, type: 3}
     - {fileID: 1789570279280792, guid: 056f556e83717d945b2b7303930ae56c, type: 3}
   _playerController:
-    _startGoldValue: 10000
-    _startGemsValue: 10
+    _startGoldValue: 100000
+    _startGemsValue: 100
     _startSpinsCount: 3
   _firstFreeHeroName: NoWeapon01
 --- !u!4 &212093960
@@ -4895,9 +4895,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1684953408}
-        m_TargetAssemblyTypeName: LobbySceneController, Assembly-CSharp
-        m_MethodName: ChangeHero
+      - m_Target: {fileID: 231240099}
+        m_TargetAssemblyTypeName: DefaultNamespace.SceneController.SceneController,
+          Assembly-CSharp
+        m_MethodName: LoadSelectHeroScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5577,9 +5578,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnPoint: {x: 0, y: 60, z: 0}
   _uiLobbySceneView: {fileID: 1302545565}
-  _moneyView: {fileID: 990913795}
-  _sceneController: {fileID: 231240099}
   _dayliGiftButton: {fileID: 2134987318}
+  _moneyView: {fileID: 990913795}
 --- !u!4 &1684953409
 Transform:
   m_ObjectHideFlags: 0

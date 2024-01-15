@@ -6,22 +6,22 @@ namespace DefaultNamespace
     [Serializable]
     public class Wallet
     {
-        [SerializeField] private float _goldAmount;
-        [SerializeField] private float _gemsAmount;
-        public float GoldAmount => _goldAmount;
-        public float GemsAmount => _gemsAmount;
+        public event Action OmMoneyValueChanged;
+        public float GoldAmount { get; private set; }
+        public float GemsAmount { get; private set; }
 
         public Wallet(float gold, float gems)
         {
-            _goldAmount = gold;
-            _gemsAmount = gems;
+            GoldAmount = gold;
+            GemsAmount = gems;
         }
         public void SpendGold(float price)
         {
             if (GoldAmount >= price)
             {
-                _goldAmount -= price;
-                PlayerPrefs.SetFloat(GlobalConstants.GOLD_TAG, _goldAmount);
+                GoldAmount -= price;
+                PlayerPrefs.SetFloat(PlayerPrefsNames.GOLD, GoldAmount);
+                OmMoneyValueChanged?.Invoke();
             }
         }
         
@@ -29,22 +29,25 @@ namespace DefaultNamespace
         {
             if (GemsAmount >= price)
             {
-                _gemsAmount -= price;
-                PlayerPrefs.SetFloat(GlobalConstants.GEM_TAG, _gemsAmount);
+                GemsAmount -= price;
+                PlayerPrefs.SetFloat(PlayerPrefsNames.GEM, GemsAmount);
+                OmMoneyValueChanged?.Invoke();
             }
 
         }
 
         public void AddGold(float amount)
         {
-            _goldAmount += amount;
-            PlayerPrefs.SetFloat(GlobalConstants.GOLD_TAG, _goldAmount);
+            GoldAmount += amount;
+            PlayerPrefs.SetFloat(PlayerPrefsNames.GOLD, GoldAmount);
+            OmMoneyValueChanged?.Invoke();
         }
         
         public void AddGems(float amount)
         {
-            _gemsAmount += amount;
-            PlayerPrefs.SetFloat(GlobalConstants.GEM_TAG, _gemsAmount);
+            GemsAmount += amount;
+            PlayerPrefs.SetFloat(PlayerPrefsNames.GEM, GemsAmount);
+            OmMoneyValueChanged?.Invoke();
         }
         
     }

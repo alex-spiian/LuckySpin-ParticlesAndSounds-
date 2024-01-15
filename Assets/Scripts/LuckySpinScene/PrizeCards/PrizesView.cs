@@ -13,14 +13,14 @@ public class PrizesView : MonoBehaviour
 
    public void UpdatePrizesCount()
    {
-      _goldCount.text = "x " + PlayerPrefs.GetInt("won"+GlobalConstants.GOLD_TAG) *
+      _goldCount.text = "x " + PlayerPrefs.GetInt(PlayerPrefsNames.WON + GlobalConstants.GOLD_TAG) *
          GlobalConstants.GOLD_MULTIPLICATOR;
       
-      _gemsCount.text = "x " + PlayerPrefs.GetInt("won"+GlobalConstants.GEM_TAG) *
-         GlobalConstants.GEMS_MULTIPLICATOR;;
+      _gemsCount.text = "x " + PlayerPrefs.GetInt(PlayerPrefsNames.WON + GlobalConstants.GEM_TAG) *
+         GlobalConstants.GEMS_MULTIPLICATOR;
       
-      _lifesCount.text = "x " + PlayerPrefs.GetInt("won"+GlobalConstants.HEART_TAG);
+      _lifesCount.text = "x " + PlayerPrefs.GetInt(PlayerPrefsNames.WON + GlobalConstants.HEART_TAG);
       
-      _mysteryCardsCount.text = "x " + PlayerPrefs.GetInt("won"+GlobalConstants.RUNE_TAG);
+      _mysteryCardsCount.text = "x " + PlayerPrefs.GetInt(PlayerPrefsNames.WON + GlobalConstants.RUNE_TAG);
    }
 }

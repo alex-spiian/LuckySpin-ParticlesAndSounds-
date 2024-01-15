@@ -20,16 +20,23 @@ namespace FortuneWheel
         private float _startRotationState;
         private float _endRotationState;
 
+        private void Awake()
+        {
+            OnWheelRotation += SetSpinButtonNonInteractable;
+            OnWheelRotation += _audioSource.Play;
+            
+            OnWheelStopped += SetSpinButtonInteractable;
+            OnWheelStopped += _audioSource.Stop;
+        }
+
         public void Rotate()
         {
             OnWheelRotation?.Invoke();
-            _audioSource.Play();
             
             _endRotationState += _settingsKeeper.GetRandomRotationAngel();
             _rotationDuration = _settingsKeeper.GetRandomRotationDuration();
             _speedRotation = _settingsKeeper.GetRandomSpeedRotation();
             
-            SetSpinButtonNonInteractable();
             StartCoroutine(RotateCoroutine());
         }
 
@@ -61,8 +68,6 @@ namespace FortuneWheel
             transform.rotation = Quaternion.Euler(0f, 180f, _endRotationState);
             _startRotationState = _endRotationState;
             
-            _audioSource.Stop();
-            SetSpinButtonInteractable();
             OnWheelStopped?.Invoke();
 
         }

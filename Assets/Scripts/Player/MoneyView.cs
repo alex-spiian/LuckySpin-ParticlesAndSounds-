@@ -16,8 +16,8 @@ namespace DefaultNamespace
 
         public void UpdateMoneyView()
         {
-            _goldValue.text = PlayerPrefs.GetFloat(GlobalConstants.GOLD_TAG).ToString("N0");
-            _gemesValue.text = PlayerPrefs.GetFloat(GlobalConstants.GEM_TAG).ToString("N0");
+            _goldValue.text = PlayerPrefs.GetFloat(PlayerPrefsNames.GOLD).ToString("N0");
+            _gemesValue.text = PlayerPrefs.GetFloat(PlayerPrefsNames.GEM).ToString("N0");
         }
 
       

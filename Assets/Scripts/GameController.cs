@@ -7,12 +7,10 @@ public class GameController : MonoBehaviour
 {
 
     public PlayerController GetPlayerController => _playerController;
-    public Hero GetCurrentHero => _heroesController.GetCurrentHero(PlayerPrefs.GetInt("CurrentHero"));
-    public int GetHeroesCount => _heroesController.GetHeroesCount();
-
+    public HeroesController GetHeroesController => _heroesController;
+    
     [SerializeField] private HeroesController _heroesController;
     [SerializeField] private PlayerController _playerController;
-    
     [SerializeField] private string _firstFreeHeroName;
 
     private static GameController _instance;
@@ -44,8 +42,7 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         _heroesController.InitializeHeroesStats();
-        
-        _playerController.AddHeroNameInBoughtList(_firstFreeHeroName);
+        PlayerPrefs.SetString(_firstFreeHeroName, PlayerPrefsNames.BOUGHT);
         
         if (_instance != null && _instance != this)
         {

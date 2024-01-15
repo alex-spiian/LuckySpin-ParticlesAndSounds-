@@ -11,8 +11,6 @@ namespace PrizeCards
     [Serializable]
     public class PrizeCardsController : MonoBehaviour
     {
-        public UnityEvent OnDarkScreenMode;
-
         [SerializeField] public GameObject[] _cards;
         [SerializeField] private ArrowController _arrowController;
 
@@ -22,14 +20,11 @@ namespace PrizeCards
             {
                 if (_cards[i].transform.CompareTag(_arrowController.GetWonPrizeName))
                 {
-                    OnDarkScreenMode?.Invoke();
-
                     _cards[i].SetActive(true);
                     
                 }
             }
         }
-        
         public void ResetCardsState()
         {
             for (int i = 0; i < _cards.Length; i++)

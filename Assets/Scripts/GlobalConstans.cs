@@ -29,6 +29,8 @@ namespace DefaultNamespace
 
         public const string SPIN_ANIM_TRIGGER_FLY = "Fly";
         public const string PRIZE_CARD_TYPE = "Prize";
+
+        public const int CHEST_ORDER_TO_BE_ABOVE_DARK_SCREEN = 4;
     }
     
 }
