@@ -26,6 +26,8 @@ namespace PrizeCards
             if (cardType == GlobalConstants.PRIZE_CARD_TYPE)
             {
                 OnCardIsInChest?.Invoke();
+                PlayerPrefs.SetInt(PlayerPrefsNames.WON + gameObject.tag,
+                    PlayerPrefs.GetInt(PlayerPrefsNames.WON + gameObject.tag) + 1);
             }
 
             

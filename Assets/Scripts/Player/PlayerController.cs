@@ -2,67 +2,70 @@ using System;
 using System.Collections.Generic;
 using DefaultNamespace;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [Serializable]
 public class PlayerController
 {
     public Action OnSpinsCountChanged;
-    public event Action OnHeroBought;
+    public Action<Hero> OnHeroBought;
     
-    [SerializeField]
-    private Wallet _wallet;
+    [SerializeField] private float _startGoldValue;
+    [SerializeField] private float _startGemsValue;
     
-    private int _spinsCount = 3;
-    public float GetGoldValue => _wallet.GoldAmount; 
-    public float GetGemsValue => _wallet.GemsAmount;
-    public int GetSpinsCount => _spinsCount;
-    
-    
-    private List<string> _boughtHeroesNames = new List<string>();
+    [SerializeField] private int _startSpinsCount;
+    public Wallet Wallet { get; private set; }
+    private int _spinsCount;
+
     
     private void Awake()
     {
         OnSpinsCountChanged?.Invoke();
     }
-    public bool HaveEnoughGold(float price) => _wallet.GoldAmount >= price;
+    public bool HaveEnoughGold(float price) => Wallet.GoldAmount >= price;
 
-    public bool HaveEnoughGems(float price) => _wallet.GemsAmount >= price;
+    public bool HaveEnoughGems(float price) => Wallet.GemsAmount >= price;
 
     public void SpendSpin()
     {
         _spinsCount--;
-            
+        PlayerPrefs.SetInt(PlayerPrefsNames.SPINS, _spinsCount);
         OnSpinsCountChanged?.Invoke();
     }
-    
-    public void AddHeroNameInBoughtList(string heroName)
-    {
-        if (!_boughtHeroesNames.Contains(heroName))
-        {
-            _boughtHeroesNames.Add(heroName);
-        }
-    }
 
-    public bool IsHeroBought(string heroName)
-    {
-        return _boughtHeroesNames.Contains(heroName);
-    }
 
     public void TryBuyHero(Hero hero)
     {
         if (!HaveEnoughGold(hero.Price)) return;
         
-        _wallet.SpendGold(hero.Price);
-        AddHeroNameInBoughtList(hero.Name);
-        
-        OnHeroBought?.Invoke();
+        PlayerPrefs.SetString(hero.Name, PlayerPrefsNames.BOUGHT);
+        OnHeroBought?.Invoke(hero);
+        Wallet.SpendGold(hero.Price);
     }
 
     public void UpdateWonPrizesValue()
     {
-        _wallet.AddGold(GameController.Instance.WonPlayersPrizes[GlobalConstants.GOLD_TAG] * GlobalConstants.GOLD_MULTIPLICATOR);
-        _wallet.AddGems(GameController.Instance.WonPlayersPrizes[GlobalConstants.GEM_TAG] * GlobalConstants.GEMS_MULTIPLICATOR);
+        Wallet.AddGold(PlayerPrefs.GetInt(PlayerPrefsNames.WON + PlayerPrefsNames.GOLD) * GlobalConstants.GOLD_MULTIPLICATOR);
+        Wallet.AddGems(PlayerPrefs.GetInt(PlayerPrefsNames.WON + PlayerPrefsNames.GEM) * GlobalConstants.GEMS_MULTIPLICATOR);
         
+    }
+
+    public void SetDefaultInformation()
+    {
+        PlayerPrefs.SetFloat(PlayerPrefsNames.GOLD, _startGoldValue);
+        PlayerPrefs.SetFloat(PlayerPrefsNames.GEM, _startGemsValue);
+        PlayerPrefs.SetInt(PlayerPrefsNames.SPINS, _startSpinsCount);
+
+        Wallet = new Wallet(_startGoldValue, _startGemsValue);
+        _spinsCount = _startSpinsCount;
+    }
+
+    public void LoadSavedInformation()
+    {
+        Wallet = new Wallet(PlayerPrefs.GetFloat(PlayerPrefsNames.GOLD),
+            PlayerPrefs.GetFloat(PlayerPrefsNames.GEM));
+        
+        _spinsCount = PlayerPrefs.GetInt(PlayerPrefsNames.SPINS);
     }
     
 }

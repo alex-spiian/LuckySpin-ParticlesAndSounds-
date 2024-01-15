@@ -40472,18 +40472,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1383927639}
-        m_TargetAssemblyTypeName: ChestAnimationsController, Assembly-CSharp
-        m_MethodName: GivePrizesToPlayer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1697558307}
         m_TargetAssemblyTypeName: DefaultNamespace.MoneyView, Assembly-CSharp
         m_MethodName: UpdateMoneyView
@@ -50845,9 +50833,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fe4ea755b38435d961a29cfd56c07af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnDarkScreenMode:
-    m_PersistentCalls:
-      m_Calls: []
   _cards:
   - {fileID: 127219596}
   - {fileID: 1860313994}
@@ -51619,7 +51604,7 @@ MonoBehaviour:
   _claimButton: {fileID: 1039340458}
   _openChestButton: {fileID: 483937870}
   _chestCanvas: {fileID: 1366373939}
-  _prizeCardsController: {fileID: 1218606153}
+  _moneyView: {fileID: 1697558307}
 --- !u!82 &1383927640
 AudioSource:
   m_ObjectHideFlags: 0
@@ -63937,16 +63922,15 @@ MonoBehaviour:
   _wheelRotator: {fileID: 245912196}
   prizeCardsController: {fileID: 1218606153}
   _playerController:
-    _wallet:
-      _goldAmount: 0
-      _gemsAmount: 0
+    _startGoldValue: 0
+    _startGemsValue: 0
+    _startSpinsCount: 0
   _spinAnimationsController: {fileID: 740847888}
   _chestAnimationsController: {fileID: 1383927639}
   _spinsCountView: {fileID: 1694125772}
   _prizesView: {fileID: 1969051209}
   _moneyView: {fileID: 1697558307}
   _auraController: {fileID: 1934798495}
-  _prizeCardsController: {fileID: 1218606153}
 --- !u!4 &2068164378
 Transform:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ public class UILobbySceneView : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _heroExperience;
     
     [SerializeField] private Slider _experianceValue;
-    
+
     public void UpdateHeroInformation(Hero currentHero)
     {
         _heroName.text = currentHero.Name;

@@ -20,5 +20,10 @@ namespace DefaultNamespace.SceneController
         {
             SceneManager.LoadScene(GlobalConstants.LUCKY_SPIN_SCENE_NAME);
         }
+
+        public void LoadGameScene()
+        {
+            SceneManager.LoadScene(GlobalConstants.GAME_SCENE_NAME);
+        }
     }
 }

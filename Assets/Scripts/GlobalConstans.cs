@@ -8,7 +8,7 @@ namespace DefaultNamespace
         public const string SELECT_HERO_SCENE_NAME = "SelectHeroScene";
         public const string LOBBY_SCENE_NAME = "LobbyScene";
         public const string LUCKY_SPIN_SCENE_NAME = "LuckySpinScene";
-        
+        public const string GAME_SCENE_NAME = "GameScene";
         
         public const float MAX_ROTATION_ANGEL = 360;
         public const float MIN_ROTATION_ANGEL = 0;
@@ -29,6 +29,8 @@ namespace DefaultNamespace
 
         public const string SPIN_ANIM_TRIGGER_FLY = "Fly";
         public const string PRIZE_CARD_TYPE = "Prize";
+
+        public const int CHEST_ORDER_TO_BE_ABOVE_DARK_SCREEN = 4;
     }
     
 }
