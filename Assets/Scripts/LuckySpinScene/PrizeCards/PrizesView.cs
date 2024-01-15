@@ -11,16 +11,16 @@ public class PrizesView : MonoBehaviour
    [SerializeField] private TextMeshProUGUI _lifesCount;
    [SerializeField] private TextMeshProUGUI _mysteryCardsCount;
 
-   public void UpdatePrizesCount(int gold, int gems, int life, int mysteryCards)
+   public void UpdatePrizesCount()
    {
-      _goldCount.text = "x " + GameController.Instance.WonPlayersPrizes[GlobalConstants.GOLD_TAG] *
+      _goldCount.text = "x " + PlayerPrefs.GetInt(PlayerPrefsNames.WON + GlobalConstants.GOLD_TAG) *
          GlobalConstants.GOLD_MULTIPLICATOR;
       
-      _gemsCount.text = "x " + GameController.Instance.WonPlayersPrizes[GlobalConstants.GEM_TAG] *
-         GlobalConstants.GEMS_MULTIPLICATOR;;
+      _gemsCount.text = "x " + PlayerPrefs.GetInt(PlayerPrefsNames.WON + GlobalConstants.GEM_TAG) *
+         GlobalConstants.GEMS_MULTIPLICATOR;
       
-      _lifesCount.text = "x " + GameController.Instance.WonPlayersPrizes[GlobalConstants.HEART_TAG];
+      _lifesCount.text = "x " + PlayerPrefs.GetInt(PlayerPrefsNames.WON + GlobalConstants.HEART_TAG);
       
-      _mysteryCardsCount.text = "x " + GameController.Instance.WonPlayersPrizes[GlobalConstants.RUNE_TAG];
+      _mysteryCardsCount.text = "x " + PlayerPrefs.GetInt(PlayerPrefsNames.WON + GlobalConstants.RUNE_TAG);
    }
 }

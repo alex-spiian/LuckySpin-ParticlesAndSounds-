@@ -2738,6 +2738,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1948083643}
+        m_TargetAssemblyTypeName: DefaultNamespace.SceneController.SceneController,
+          Assembly-CSharp
+        m_MethodName: LoadLobbyScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &918074124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3300,6 +3313,19 @@ MonoBehaviour:
       - m_Target: {fileID: 1976036066}
         m_TargetAssemblyTypeName: SelectHeroSceneController, Assembly-CSharp
         m_MethodName: SelectHero
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1948083643}
+        m_TargetAssemblyTypeName: DefaultNamespace.SceneController.SceneController,
+          Assembly-CSharp
+        m_MethodName: LoadLobbyScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5211,7 +5237,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -246.9262, y: -68.65227, z: -161.909, w: -68.66477}
+  m_margin: {x: -246.9262, y: -68.65227, z: -175.7391, w: -68.66477}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5443,6 +5469,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1948083643}
+        m_TargetAssemblyTypeName: DefaultNamespace.SceneController.SceneController,
+          Assembly-CSharp
+        m_MethodName: LoadLobbyScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1976036066}
         m_TargetAssemblyTypeName: SelectHeroSceneController, Assembly-CSharp
         m_MethodName: BackToLobbyScene
@@ -5883,14 +5922,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768394421}
-  m_LocalRotation: {x: 0.09340724, y: -0.059119757, z: -0.16853614, w: -0.97947717}
-  m_LocalPosition: {x: -15, y: 20, z: -20}
+  m_LocalRotation: {x: 0.16434968, y: 0.9811158, z: 0.1005838, w: -0.016849097}
+  m_LocalPosition: {x: 8.6, y: -51.2, z: -160.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: -11.707, y: 180, z: 19.019}
 --- !u!1 &1794928463
 GameObject:
   m_ObjectHideFlags: 0
@@ -6681,7 +6720,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _uiSelectHeroSceneView: {fileID: 1984992223}
   _heroSwitcher: {fileID: 1412683821}
-  _sceneController: {fileID: 1948083643}
   _moneyView: {fileID: 265029848}
 --- !u!1 &1984992222
 GameObject:
@@ -6712,16 +6750,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51e92c56052414ba29599543f67e7563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthValue: {fileID: 1175200167}
-  _attackValue: {fileID: 1794928465}
-  _defenceValue: {fileID: 492090217}
-  _speedValue: {fileID: 1393698034}
-  _heroNameLabel: {fileID: 1756522542}
-  _heroWeaponLabel: {fileID: 61216372}
-  _heroPriceLabel: {fileID: 13914792}
-  _heroExperienceLabel: {fileID: 617687141}
-  _heroLevelLabel: {fileID: 1815711578}
-  _heroTypeImage: {fileID: 806299852}
+  _heroInformationView:
+    _heroNameLabel: {fileID: 1756522542}
+    _heroWeaponLabel: {fileID: 61216372}
+    _heroPriceLabel: {fileID: 13914792}
+    _heroExperienceLabel: {fileID: 617687141}
+    _heroLevelLabel: {fileID: 1815711578}
+    _heroTypeImage: {fileID: 806299852}
+  _heroStatsView:
+    _healthValue: {fileID: 1175200167}
+    _attackValue: {fileID: 1794928465}
+    _defenceValue: {fileID: 492090217}
+    _speedValue: {fileID: 1393698034}
   _buyHeroButton: {fileID: 1816056901}
   _selectHeroButton: {fileID: 1026064907}
 --- !u!4 &1984992224
@@ -7575,7 +7615,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.78
+  orthographic size: 1.22
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -7598,14 +7638,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2129279419}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 61.8, z: -8.5}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 60.864, z: 7.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &2133457772
 GameObject:
   m_ObjectHideFlags: 0

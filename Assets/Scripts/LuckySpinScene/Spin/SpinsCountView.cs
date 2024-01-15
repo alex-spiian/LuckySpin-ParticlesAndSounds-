@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using TMPro;
 using UnityEngine;
 
@@ -17,7 +18,7 @@ namespace Spin
 
         public void UpdateSpinsCount()
         {
-            _spinsCount.text = "x " + GameController.Instance.GetPlayersSpinsCount;
+            _spinsCount.text = "x " + PlayerPrefs.GetInt(PlayerPrefsNames.SPINS);
         }
     }
 }

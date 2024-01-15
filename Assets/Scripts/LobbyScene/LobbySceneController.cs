@@ -6,35 +6,47 @@ public class LobbySceneController : MonoBehaviour
 {
     [SerializeField] private Vector3 _spawnPoint;
     [SerializeField] private UILobbySceneView _uiLobbySceneView;
-    [SerializeField] private MoneyView _moneyView;
-    [SerializeField] private SceneController _sceneController;
     [SerializeField] private GameObject _dayliGiftButton;
+    [SerializeField] private MoneyView _moneyView;
+
+    private HeroesController _heroesController;
     
     private void Awake()
     {
-        if (GameController.Instance.GetPlayersSpinsCount == 0)
+        _heroesController = GameController.Instance.GetHeroesController;
+        
+        LoadPlayersPrefs();
+        
+        if (PlayerPrefs.GetInt(PlayerPrefsNames.SPINS) == 0)
         {
             _dayliGiftButton.SetActive(false);
         }
         
         InstantiateHero();
+        _uiLobbySceneView.UpdateHeroInformation(_heroesController.GetCurrentHero());
         _moneyView.UpdateMoneyView();
-        _uiLobbySceneView.UpdateHeroInformation(GameController.Instance.GetCurrentHero);
         
     }
 
     private void InstantiateHero()
     {
-        var currentHero = GameController.Instance.GetCurrentHero;
+        var currentHero = _heroesController.GetCurrentHero();
         Instantiate(currentHero.HeroPrefab).transform.position = _spawnPoint;
         
     }
 
-    public void ChangeHero()
+    private void LoadPlayersPrefs()
     {
-        _sceneController.LoadSelectHeroScene();
+        if (PlayerPrefs.GetInt(PlayerPrefsNames.GAIM_RANNING_COUNT, 0) == 0)
+        {
+            GameController.Instance.GetPlayerController.SetDefaultInformation();
+            PlayerPrefs.SetInt(PlayerPrefsNames.GAIM_RANNING_COUNT, 1);
+            PlayerPrefs.Save();
+        }
+        else
+        {
+            GameController.Instance.GetPlayerController.LoadSavedInformation();
+        }
     }
-    
-    
     
 }

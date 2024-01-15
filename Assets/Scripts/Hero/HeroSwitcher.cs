@@ -5,43 +5,48 @@ namespace DefaultNamespace.Hero
 {
     public class HeroSwitcher : MonoBehaviour
     {
-        [SerializeField] private Vector3 _spawnPoint;
-        
-        public event Action OnHeroChanged;
+        public event Action<global::Hero> OnHeroChanged;
 
+        [SerializeField] private Vector3 _spawnPoint;
+        private HeroesController _heroesController; 
         private GameObject _currentHero;
 
         private void Awake()
         {
+            _heroesController = GameController.Instance.GetHeroesController;
             ShowCurrentHero();
+            
+            OnHeroChanged?.Invoke(_heroesController.GetCurrentHero());
         }
         
         public void NextHero()
         {
-            var availableHeroesCount = GameController.Instance.GetHeroesCount;
+            var availableHeroesCount = PlayerPrefs.GetInt(PlayerPrefsNames.HEROES_COUNT);
             
-            if (GameController.Instance.CurrentHeroIndex + 1 >= availableHeroesCount) return;
+            if (PlayerPrefs.GetInt(PlayerPrefsNames.CURRENT_HERO)+ 1 >= availableHeroesCount) return;
         
             Destroy(_currentHero);
+
+            PlayerPrefs.SetInt(PlayerPrefsNames.CURRENT_HERO, PlayerPrefs.GetInt(PlayerPrefsNames.CURRENT_HERO)+1);
             
-            GameController.Instance.CurrentHeroIndex++;
             ShowCurrentHero();
-            OnHeroChanged?.Invoke();
+            OnHeroChanged?.Invoke(_heroesController.GetCurrentHero());
         }
 
         public void PreviousHero()
         {
-            if (GameController.Instance.CurrentHeroIndex <= 0) return;
+            if (PlayerPrefs.GetInt(PlayerPrefsNames.CURRENT_HERO) <= 0) return;
         
             Destroy(_currentHero);
-            GameController.Instance.CurrentHeroIndex--;
+            PlayerPrefs.SetInt(PlayerPrefsNames.CURRENT_HERO, PlayerPrefs.GetInt(PlayerPrefsNames.CURRENT_HERO)-1);
+            
             ShowCurrentHero();
-            OnHeroChanged?.Invoke();
+            OnHeroChanged?.Invoke(_heroesController.GetCurrentHero());
         }
         
         private void ShowCurrentHero()
         {
-            var currentHero = GameController.Instance.GetCurrentHero;
+            var currentHero = _heroesController.GetCurrentHero();
 
             _currentHero = Instantiate(currentHero.HeroPrefab);
             _currentHero.transform.position = _spawnPoint;
