@@ -25,6 +25,8 @@ namespace DefaultNamespace.Hero
         private bool IsHeroStopped()
         {
             return _heroNavMeshAgent.remainingDistance <= _heroNavMeshAgent.stoppingDistance;
+
+            
         }
     }
 }
