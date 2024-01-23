@@ -25,5 +25,10 @@ namespace DefaultNamespace.SceneController
         {
             SceneManager.LoadScene(GlobalConstants.GAME_SCENE_NAME);
         }
+
+        public void LoadAchievementsScene()
+        {
+            SceneManager.LoadScene(GlobalConstants.ACHIEVEMENTS_SCENE_NAME);
+        }
     }
 }

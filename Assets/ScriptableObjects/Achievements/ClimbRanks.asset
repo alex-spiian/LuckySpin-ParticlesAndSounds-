@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef142665916b46389b3d7f87b278963, type: 3}
+  m_Name: ClimbRanks
+  m_EditorClassIdentifier: 
+  _type: Gem
+  _name: Climb the ranks
+  _namePosition: {x: -1231.8, y: 76.8, z: 0}
+  _nameFontSize: 75
+  _description: Play 5 times
+  _descriptionPosition: {x: -1232, y: -26, z: 0}
+  _descriptionFontSize: 53
+  _amount: 7
+  _amountPosition: {x: 232, y: -64, z: 0}
+  _amountFontSize: 70
+  _icon: {fileID: 21300000, guid: ecb1889fcd79d4365999c3f814fa913f, type: 3}
+  _iconPosition: {x: -1482.2, y: 8.2, z: 0}
+  _prize: {fileID: 21300000, guid: f434a60f1f85c47e085d09cab598d63d, type: 3}
+  _prizePosition: {x: 232, y: 42, z: 0}
+  _prizeSize: {x: 100, y: 75}
+  _backgroundSprite: {fileID: 21300000, guid: f112bf86ca05c44cc9611554ff2857b5, type: 3}
+  _backgroundImageSize: {x: 1633.493, y: 145}
