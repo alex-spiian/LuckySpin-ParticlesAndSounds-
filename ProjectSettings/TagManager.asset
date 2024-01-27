@@ -4,10 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Gem
-  - Gold
-  - Character
-  - Inventory
+  - Icon
+  - Name
+  - Description
+  - ClaimButton
+  - CheckMark
+  - RewardIcon
+  - Amount
   layers:
   - Default
   - TransparentFX
