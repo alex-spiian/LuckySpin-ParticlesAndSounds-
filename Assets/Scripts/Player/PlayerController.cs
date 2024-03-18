@@ -9,7 +9,7 @@ using VContainer;
 public class PlayerController
 {
     public Action OnSpinsCountChanged;
-    public Action<Hero> OnHeroBought;
+    public Action<Hero.Hero> OnHeroBought;
     public Wallet Wallet { get; private set; }
     private int _spinsCount;
     private PlayerConfig _playerConfig;
@@ -28,7 +28,7 @@ public class PlayerController
         OnSpinsCountChanged?.Invoke();
     }
     
-    public void TryBuyHero(Hero hero)
+    public void TryBuyHero(Hero.Hero hero)
     {
         if (!Wallet.HasEnoughGold(hero.Price)) return;
         

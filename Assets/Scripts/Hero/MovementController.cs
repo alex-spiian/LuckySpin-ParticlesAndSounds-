@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace DefaultNamespace.Hero
+namespace Hero
 {
     public class MovementController : MonoBehaviour
     {

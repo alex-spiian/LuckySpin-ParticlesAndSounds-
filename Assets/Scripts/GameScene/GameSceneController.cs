@@ -1,26 +1,30 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using DefaultNamespace.Hero;
+using Hero;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using VContainer;
 
 namespace GameScene
 {
     public class GameSceneController : MonoBehaviour
     {
-        [SerializeField] private Transform _spawnPoint;
         [SerializeField] private Camera _camera;
-        private HeroesController _heroesController;
         private NavMeshAgent _navMeshAgent;
 
-        private void Awake()
+        [Inject]
+        public void Construct(HeroesSpawner heroesSpawner)
         {
-            _heroesController = GameController.Instance.GetHeroesController;
-            var currentHero = Instantiate(_heroesController.GetCurrentHero());
+            StartGame(heroesSpawner);
+        }
 
-            currentHero.transform.position = _spawnPoint.transform.position;
+        private void StartGame(HeroesSpawner heroesSpawner)
+        {
+            heroesSpawner.SpawnCurrentHero();
+            var currentHero = heroesSpawner.CurrentHero;
+
             currentHero.transform.rotation = Quaternion.Euler(0, 90, 0);
 
             currentHero.AddComponent<MovementController>();

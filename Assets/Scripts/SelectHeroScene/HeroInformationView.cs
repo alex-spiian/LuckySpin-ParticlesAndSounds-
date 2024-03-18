@@ -17,7 +17,7 @@ namespace SelectHeroScene
 
         [SerializeField] private Image _heroTypeImage;
         
-        public void UpdateHeroInformation(global::Hero currentHero)
+        public void UpdateHeroInformation(Hero.Hero currentHero)
         {
             _heroNameLabel.text = currentHero.Name;
             _heroWeaponLabel.text = currentHero.Weapon;

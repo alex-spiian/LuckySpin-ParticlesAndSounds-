@@ -15,14 +15,14 @@ namespace SelectHeroScene
         [SerializeField] private Button _buyHeroButton;
         [SerializeField] private Button _selectHeroButton;
 
-        public void UpdateHeroInformation(Hero currentHero)
+        public void UpdateHeroInformation(Hero.Hero currentHero)
         {
             _heroInformationView.UpdateHeroInformation(currentHero);
             _heroStatsView.UpdateHeroInformation(currentHero);
         
         }
     
-        public void ChangeStateOfButtonsBuyAndSelect(Hero currentHero)
+        public void ChangeStateOfButtonsBuyAndSelect(Hero.Hero currentHero)
         {
             if (_buyHeroButton == null) return;
 

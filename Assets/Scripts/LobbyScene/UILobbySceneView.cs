@@ -12,7 +12,7 @@ public class UILobbySceneView : MonoBehaviour
     
     [SerializeField] private Slider _experianceValue;
 
-    public void UpdateHeroInformation(Hero currentHero)
+    public void UpdateHeroInformation(Hero.Hero currentHero)
     {
         _heroName.text = currentHero.Name;
         _heroLvl.text = currentHero.Level.ToString();

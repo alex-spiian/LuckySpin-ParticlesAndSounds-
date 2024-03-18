@@ -1,7 +1,6 @@
 using System;
 using DefaultNamespace;
-using DefaultNamespace.Hero;
-using DefaultNamespace.SceneController;
+using Hero;
 using UnityEngine;
 using VContainer;
 
@@ -10,47 +9,51 @@ namespace SelectHeroScene
     public class SelectHeroSceneController : MonoBehaviour
     {
         [SerializeField] private UISelectHeroSceneView _uiSelectHeroSceneView;
-        [SerializeField] private HeroSwitcher _heroSwitcher;
         [SerializeField] private MoneyView _moneyView;
 
         private PlayerController _playerController;
-        private HeroesController _heroesController;
-
-        private void Awake()
-        {
-            _heroesController = GameController.Instance.GetHeroesController;
-
-            _heroSwitcher.OnHeroChanged += _uiSelectHeroSceneView.UpdateHeroInformation;
-            _heroSwitcher.OnHeroChanged += _uiSelectHeroSceneView.ChangeStateOfButtonsBuyAndSelect;
-
-            UpdateInformation();
-
-        }
+        private HeroesSpawner _heroesSpawner;
 
         [Inject]
-        public void Construct(PlayerController playerController)
+        public void Construct(PlayerController playerController, HeroesSpawner heroesSpawner)
         {
             _playerController = playerController;
+            if (_heroesSpawner == null)
+            {
+                _heroesSpawner = heroesSpawner;
+            }
 
             _playerController.Wallet.OmMoneyValueChanged += _moneyView.UpdateMoneyView;
             _playerController.OnHeroBought += _uiSelectHeroSceneView.ChangeStateOfButtonsBuyAndSelect;
+            
+            heroesSpawner.OnHeroChanged += _uiSelectHeroSceneView.UpdateHeroInformation;
+            heroesSpawner.OnHeroChanged += _uiSelectHeroSceneView.ChangeStateOfButtonsBuyAndSelect;
+            
+            UpdateInformation();
         }
 
-        private void OnDisable()
+        private void OnDestroy()
         {
-            _heroSwitcher.OnHeroChanged -= _uiSelectHeroSceneView.UpdateHeroInformation;
-            _heroSwitcher.OnHeroChanged -= _uiSelectHeroSceneView.ChangeStateOfButtonsBuyAndSelect;
+            _heroesSpawner.OnHeroChanged -= _uiSelectHeroSceneView.UpdateHeroInformation;
+            _heroesSpawner.OnHeroChanged -= _uiSelectHeroSceneView.ChangeStateOfButtonsBuyAndSelect;
 
             _playerController.Wallet.OmMoneyValueChanged -= _moneyView.UpdateMoneyView;
             _playerController.OnHeroBought -= _uiSelectHeroSceneView.ChangeStateOfButtonsBuyAndSelect;
         }
-
-
+        
         public void BuyHero()
         {
-            var currentHero = _heroesController.GetCurrentHero();
-            _playerController.TryBuyHero(currentHero);
+            _playerController.TryBuyHero(_heroesSpawner.CurrentHero);
 
+        }
+        public void NextHero()
+        {
+           _heroesSpawner.NextHero();
+        }
+        
+        public void PreviousHero()
+        {
+            _heroesSpawner.PreviousHero();
         }
 
         public void SelectHero()
@@ -65,8 +68,8 @@ namespace SelectHeroScene
 
         private void UpdateInformation()
         {
-            _uiSelectHeroSceneView.UpdateHeroInformation(_heroesController.GetCurrentHero());
-            _uiSelectHeroSceneView.ChangeStateOfButtonsBuyAndSelect(_heroesController.GetCurrentHero());
+            _uiSelectHeroSceneView.UpdateHeroInformation(_heroesSpawner.CurrentHero);
+            _uiSelectHeroSceneView.ChangeStateOfButtonsBuyAndSelect(_heroesSpawner.CurrentHero);
         }
 
 

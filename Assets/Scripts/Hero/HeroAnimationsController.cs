@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace DefaultNamespace.Hero
+namespace Hero
 {
     public class HeroAnimationsController
     {

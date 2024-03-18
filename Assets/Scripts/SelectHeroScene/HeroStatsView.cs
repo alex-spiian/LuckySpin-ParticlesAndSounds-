@@ -13,7 +13,7 @@ namespace SelectHeroScene
         [SerializeField] private Slider _defenceValue;
         [SerializeField] private Slider _speedValue;
         
-        public void UpdateHeroInformation(global::Hero currentHero)
+        public void UpdateHeroInformation(Hero.Hero currentHero)
         {
             
             _healthValue.value = currentHero.Health;

@@ -1,44 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58432585-d8cd-4798-baef-96f835628278" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementsLifeTimeScope.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementsLifeTimeScope.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameScene/GameLifeTimeScope.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameScene/GameLifeTimeScope.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/LuckySpinScene/LuckySpinLifeTimeScope.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/LuckySpinScene/LuckySpinLifeTimeScope.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerConfig.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerConfig.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SelectHeroScene/SelectHeroLifeTimeScope.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SelectHeroScene/SelectHeroLifeTimeScope.cs.meta" afterDir="false" />
+    <list default="true" id="58432585-d8cd-4798-baef-96f835628278" name="Changes" comment="added VContainer, injected dependencies for PlayerController using vContainer">
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/PlayerConfig.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/PlayerConfig.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/RootLifeTimeScope.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/RootLifeTimeScope.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LuckySpin-ParticlesAndSounds-/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LuckySpin-ParticlesAndSounds-/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/AchievementsScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/AchievementsScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/LobbyScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LobbyScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LuckySpinScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LuckySpinScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SelectHeroScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SelectHeroScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Scripts/AchievementSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Scripts/AchievementConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Scripts/AchievementSettings.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Scripts/AchievementConfig.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementPlaquesCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementPlaquesCreator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/GameSceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameScene/GameSceneController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hero/Hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hero/Hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hero/HeroAnimationsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hero/HeroAnimationsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hero/HeroSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hero/HeroesSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hero/HeroSwitcher.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hero/HeroesSpawner.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hero/HeroesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hero/HeroesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hero/MovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hero/MovementController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LobbyScene/LobbySceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LobbyScene/LobbySceneController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LuckySpinScene/LuckySpinSceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LuckySpinScene/LuckySpinSceneController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LobbyScene/UILobbySceneView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LobbyScene/UILobbySceneView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Wallet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Wallet.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SelectHeroScene/HeroInformationView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SelectHeroScene/HeroInformationView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SelectHeroScene/HeroStatsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SelectHeroScene/HeroStatsView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SelectHeroScene/SelectHeroSceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SelectHeroScene/SelectHeroSceneController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SelectHeroScene/UISelectHeroSceneView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SelectHeroScene/UISelectHeroSceneView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/missions.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/missions.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/newcharacter.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/newcharacter.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,10 +51,13 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/04566754dabf4aad92818a224d3e6586469200/bb/f832a16c/RuntimeMethodInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32feec4b1ee848ebb2d59ed6b91ce73a1a1200/00/f67ac25b/PlayerPrefs.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32feec4b1ee848ebb2d59ed6b91ce73a1a1200/08/b01fd36d/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32feec4b1ee848ebb2d59ed6b91ce73a1a1200/28/4f034347/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32feec4b1ee848ebb2d59ed6b91ce73a1a1200/8a/de69f5c6/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32feec4b1ee848ebb2d59ed6b91ce73a1a1200/99/324f48b9/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32feec4b1ee848ebb2d59ed6b91ce73a1a1200/9c/16ad514e/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32feec4b1ee848ebb2d59ed6b91ce73a1a1200/bd/edb676e8/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32feec4b1ee848ebb2d59ed6b91ce73a1a1200/d2/e3815613/InvokableCall.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7b31097b49204dddb88651898a92afbc954a00/4d/7e22e80a/SerializedObject.cs" root0="SKIP_HIGHLIGHTING" />
@@ -135,10 +123,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="1110">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="1110" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -162,7 +150,7 @@
       <workItem from="1706795317004" duration="18000" />
       <workItem from="1706878908711" duration="79000" />
       <workItem from="1707068153520" duration="9000" />
-      <workItem from="1710743914633" duration="4232000" />
+      <workItem from="1710743914633" duration="15635000" />
     </task>
     <task id="LOCAL-00001" summary="added using PlayersRefs">
       <created>1705268726552</created>
@@ -192,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706317239585</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added VContainer, injected dependencies for PlayerController using vContainer">
+      <created>1710748835710</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710748835711</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,7 +225,8 @@
     <MESSAGE value="added new scene" />
     <MESSAGE value="more using playerRefs&#10;separated large classes" />
     <MESSAGE value="refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
+    <MESSAGE value="added VContainer, injected dependencies for PlayerController using vContainer" />
+    <option name="LAST_COMMIT_MESSAGE" value="added VContainer, injected dependencies for PlayerController using vContainer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -240,10 +236,10 @@
           <line>17</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Hero/HeroAnimationsController.cs" initialLine="18" containingFunctionPresentation="method 'PlayAnimations'">
             <startOffsets>
-              <option value="427" />
+              <option value="410" />
             </startOffsets>
             <endOffsets>
-              <option value="493" />
+              <option value="476" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />
@@ -279,6 +275,45 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Hero/HeroesSpawner.cs</url>
+          <line>24</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Hero/HeroesSpawner.cs" initialLine="25" containingFunctionPresentation="method 'NextHero'">
+            <startOffsets>
+              <option value="679" />
+            </startOffsets>
+            <endOffsets>
+              <option value="756" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Hero/HeroesSpawner.cs</url>
+          <line>40</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Hero/HeroesSpawner.cs" initialLine="39" containingFunctionPresentation="method 'PreviousHero'">
+            <startOffsets>
+              <option value="1331" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1353" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Hero/HeroesSpawner.cs</url>
+          <line>51</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Hero/HeroesSpawner.cs" initialLine="51" containingFunctionPresentation="method 'SpawnCurrentHero'">
+            <startOffsets>
+              <option value="1705" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1774" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

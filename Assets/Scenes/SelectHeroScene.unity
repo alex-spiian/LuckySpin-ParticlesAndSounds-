@@ -877,7 +877,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &327417992
 GameObject:
@@ -2457,8 +2457,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1412683821}
-        m_TargetAssemblyTypeName: DefaultNamespace.Hero.HeroSwitcher, Assembly-CSharp
+      - m_Target: {fileID: 1976036066}
+        m_TargetAssemblyTypeName: SelectHeroScene.SelectHeroSceneController, Assembly-CSharp
         m_MethodName: NextHero
         m_Mode: 1
         m_Arguments:
@@ -4112,51 +4112,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399918771}
   m_CullTransparentMesh: 1
---- !u!1 &1412683820
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1412683822}
-  - component: {fileID: 1412683821}
-  m_Layer: 0
-  m_Name: HeroSwitcher
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1412683821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1412683820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61b6eb7472614cf79bf306a7d6e071ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spawnPoint: {x: 0, y: 60, z: 0}
---- !u!4 &1412683822
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1412683820}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 61.800003, z: -8.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1459228096
 GameObject:
   m_ObjectHideFlags: 0
@@ -6067,7 +6022,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1815711576
 GameObject:
@@ -6629,7 +6584,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1969466771
 GameObject:
@@ -6768,7 +6723,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _uiSelectHeroSceneView: {fileID: 1984992223}
-  _heroSwitcher: {fileID: 1412683821}
   _moneyView: {fileID: 265029848}
 --- !u!1 &1984992222
 GameObject:
@@ -7486,8 +7440,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1412683821}
-        m_TargetAssemblyTypeName: DefaultNamespace.Hero.HeroSwitcher, Assembly-CSharp
+      - m_Target: {fileID: 1976036066}
+        m_TargetAssemblyTypeName: SelectHeroScene.SelectHeroSceneController, Assembly-CSharp
         m_MethodName: PreviousHero
         m_Mode: 1
         m_Arguments:
