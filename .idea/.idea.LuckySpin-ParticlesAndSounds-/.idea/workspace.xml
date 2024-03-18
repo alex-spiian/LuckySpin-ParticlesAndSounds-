@@ -2,38 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58432585-d8cd-4798-baef-96f835628278" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementPlaquesCreator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementPlaquesCreator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementsLifeTimeScope.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementsLifeTimeScope.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameScene/GameLifeTimeScope.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameScene/GameLifeTimeScope.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/LuckySpinScene/LuckySpinLifeTimeScope.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/LuckySpinScene/LuckySpinLifeTimeScope.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerConfig.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SelectHeroScene/SelectHeroLifeTimeScope.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SelectHeroScene/SelectHeroLifeTimeScope.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LuckySpin-ParticlesAndSounds-/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LuckySpin-ParticlesAndSounds-/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/AchievementsShadow.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/AchievementsShadow.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Achievements/ClimbRanks.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Achievements/ClimbRanks.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Achievements/CollectGolds.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Achievements/CollectGolds.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Achievements/LevelUp.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Achievements/LevelUp.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Achievements/Technician.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Achievements/Technician.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/AchievementsScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/AchievementsScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Buttons.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Buttons/CheckMarkSettings.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Buttons/CheckMarkSettings.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Buttons/ClaimButtonSettings.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Buttons/ClaimButtonSettings.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Scripts/AchievementSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Scripts/AchievementSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Scripts/AchievementsButtonsSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Scripts/AchievementsButtonsSettings.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/Achievements.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/Achievements/AchievementController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/Achievements/AchievementController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/ContentController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/ContentController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LobbyScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LobbyScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LuckySpinScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LuckySpinScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SelectHeroScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SelectHeroScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Scripts/AchievementSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Scripts/AchievementConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Scripts/AchievementSettings.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Scripts/AchievementConfig.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementPlaquesCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementPlaquesCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/GameSceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameScene/GameSceneController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LobbyScene/LobbySceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LobbyScene/LobbySceneController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LuckySpinScene/LuckySpinSceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LuckySpinScene/LuckySpinSceneController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Wallet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Wallet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SelectHeroScene/HeroInformationView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SelectHeroScene/HeroInformationView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SelectHeroScene/HeroStatsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SelectHeroScene/HeroStatsView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SelectHeroScene/SelectHeroSceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SelectHeroScene/SelectHeroSceneController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SelectHeroScene/UISelectHeroSceneView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SelectHeroScene/UISelectHeroSceneView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/missions.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/missions.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/newcharacter.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/newcharacter.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,10 +75,12 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7b31097b49204dddb88651898a92afbc954a00/4d/7e22e80a/SerializedObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hero/HeroAnimationsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hero/MovementController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RootLifeTimeScope.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/StandaloneInputModule.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@4a23aa6958/Runtime/Unity/LifetimeScope.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -128,10 +135,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="29107">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="29107" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -150,7 +157,12 @@
       <workItem from="1705246401618" duration="41579000" />
       <workItem from="1705854552770" duration="1000" />
       <workItem from="1705854623943" duration="33385000" />
-      <workItem from="1706302415201" duration="14684000" />
+      <workItem from="1706302415201" duration="15598000" />
+      <workItem from="1706340160295" duration="1206000" />
+      <workItem from="1706795317004" duration="18000" />
+      <workItem from="1706878908711" duration="79000" />
+      <workItem from="1707068153520" duration="9000" />
+      <workItem from="1710743914633" duration="4232000" />
     </task>
     <task id="LOCAL-00001" summary="added using PlayersRefs">
       <created>1705268726552</created>
@@ -173,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705340413640</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="refactoring">
+      <created>1706317239585</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706317239585</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,7 +229,8 @@
     <MESSAGE value="added using PlayersRefs" />
     <MESSAGE value="added new scene" />
     <MESSAGE value="more using playerRefs&#10;separated large classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="more using playerRefs&#10;separated large classes" />
+    <MESSAGE value="refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -239,49 +259,23 @@
           <line>47</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementController.cs" initialLine="48" containingFunctionPresentation="method 'Claim'">
             <startOffsets>
-              <option value="1449" />
+              <option value="1474" />
             </startOffsets>
             <endOffsets>
-              <option value="1481" />
+              <option value="1506" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementPlaquesCreator.cs</url>
-          <line>55</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementPlaquesCreator.cs" initialLine="55" containingFunctionPresentation="method 'InitializeAchievementController'">
-            <startOffsets>
-              <option value="1790" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1838" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementPlaquesCreator.cs</url>
-          <line>43</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementPlaquesCreator.cs" initialLine="44" containingFunctionPresentation="method 'GetCurrentAnimatedReward'">
-            <startOffsets>
-              <option value="1416" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1417" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementController.cs</url>
-          <line>29</line>
+          <line>30</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementController.cs" initialLine="29" containingFunctionPresentation="method 'Awake'">
             <startOffsets>
-              <option value="810" />
+              <option value="828" />
             </startOffsets>
             <endOffsets>
-              <option value="811" />
+              <option value="829" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="31" />

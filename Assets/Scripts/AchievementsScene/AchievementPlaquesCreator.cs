@@ -1,15 +1,17 @@
 using System;
 using DefaultNamespace;
 using UnityEngine;
+using UnityEngine.Serialization;
+using VContainer;
 
 namespace AchievementsScene
 {
     public class AchievementPlaquesCreator : MonoBehaviour
     {
         [SerializeField]
-        private AchievementSettings[] _achievementSettings;
+        private AchievementConfig[] _achievementConfig;
         [SerializeField]
-        private AchievementController _achievementControllerPrefab;
+        private AchievementController _achievementPrefab;
         [SerializeField]
         private GameObject[] _animatedRewards;
         [SerializeField]
@@ -20,15 +22,16 @@ namespace AchievementsScene
         private GameObject _darkAnimatedObjectPrefab;
 
         private AchievementController _achievementController;
-        
+        private PlayerController _playerController;
+
 
         private void Awake()
         {
-            for (int i = 0; i < _achievementSettings.Length; i++)
+            for (int i = 0; i < _achievementConfig.Length; i++)
             {
-               _achievementController = Instantiate(_achievementControllerPrefab, transform);
+               _achievementController = Instantiate(_achievementPrefab, transform);
                InitializeAchievementController(i);
-               _achievementController.FillLabels(_achievementSettings[i]);
+               _achievementController.FillLabels(_achievementConfig[i]);
                 
                 if (PlayerPrefs.GetString(_achievementController.RewardName) == GlobalConstants.COLLECTED)
                 {
@@ -37,6 +40,11 @@ namespace AchievementsScene
             }
         }
 
+        [Inject]
+        public void Construct(PlayerController playerController)
+        {
+            _playerController = playerController;
+        }
         
         private GameObject GetCurrentAnimatedReward()
         {
@@ -52,14 +60,14 @@ namespace AchievementsScene
 
         private void InitializeAchievementController(int index)
         {
-            _achievementController.Type = _achievementSettings[index].Type;
-            var amount = _achievementSettings[index].Amount;
-            var rewardName = _achievementSettings[index].Name;
+            _achievementController.Type = _achievementConfig[index].Type;
+            var amount = _achievementConfig[index].Amount;
+            var rewardName = _achievementConfig[index].Name;
             var darkAnimatedCover = Instantiate(_darkAnimatedObjectPrefab,_achievementController.gameObject.transform);
             darkAnimatedCover.SetActive(false);
             
             _achievementController.Initialize(rewardName, amount, _moneyView, 
-                GetCurrentAnimatedReward(), _darkScreen, darkAnimatedCover);
+                GetCurrentAnimatedReward(), _darkScreen, darkAnimatedCover, _playerController);
         }
     }
 }

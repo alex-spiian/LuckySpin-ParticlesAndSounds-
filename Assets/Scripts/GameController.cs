@@ -6,11 +6,9 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
 
-    public PlayerController GetPlayerController => _playerController;
     public HeroesController GetHeroesController => _heroesController;
     
     [SerializeField] private HeroesController _heroesController;
-    [SerializeField] private PlayerController _playerController;
     [SerializeField] private string _firstFreeHeroName;
 
     private static GameController _instance;

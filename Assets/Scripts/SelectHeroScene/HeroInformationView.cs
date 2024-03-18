@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace DefaultNamespace.SelectHeroScene
+namespace SelectHeroScene
 {
     [Serializable]
     public class HeroInformationView

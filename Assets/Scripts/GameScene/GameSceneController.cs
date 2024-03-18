@@ -6,22 +6,25 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class GameSceneController : MonoBehaviour
+namespace GameScene
 {
-    [SerializeField] private Transform _spawnPoint;
-    [SerializeField] private Camera _camera;
-    private HeroesController _heroesController;
-    private NavMeshAgent _navMeshAgent;
-
-    private void Awake()
+    public class GameSceneController : MonoBehaviour
     {
-        _heroesController = GameController.Instance.GetHeroesController;
-        var currentHero = Instantiate(_heroesController.GetCurrentHero());
+        [SerializeField] private Transform _spawnPoint;
+        [SerializeField] private Camera _camera;
+        private HeroesController _heroesController;
+        private NavMeshAgent _navMeshAgent;
 
-        currentHero.transform.position = _spawnPoint.transform.position;
-        currentHero.transform.rotation = Quaternion.Euler(0, 90, 0);
+        private void Awake()
+        {
+            _heroesController = GameController.Instance.GetHeroesController;
+            var currentHero = Instantiate(_heroesController.GetCurrentHero());
 
-        currentHero.AddComponent<MovementController>();
-        _camera.transform.SetParent(currentHero.transform);
+            currentHero.transform.position = _spawnPoint.transform.position;
+            currentHero.transform.rotation = Quaternion.Euler(0, 90, 0);
+
+            currentHero.AddComponent<MovementController>();
+            _camera.transform.SetParent(currentHero.transform);
+        }
     }
 }

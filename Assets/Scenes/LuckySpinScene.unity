@@ -312,6 +312,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28831997}
   m_CullTransparentMesh: 1
+--- !u!1 &33145495
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 33145497}
+  - component: {fileID: 33145496}
+  m_Layer: 0
+  m_Name: LuckySpinLifeTimeScope
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &33145496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33145495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7889ef2b1da4c69aaa4c3616201cbd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentReference:
+    TypeName: RootLifeTimeScope
+  autoRun: 1
+  autoInjectGameObjects:
+  - {fileID: 2068164376}
+--- !u!4 &33145497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33145495}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 457.12848, y: -424.86676, z: 0.4006341}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &54709165
 GameObject:
   m_ObjectHideFlags: 0
@@ -51604,7 +51653,6 @@ MonoBehaviour:
   _claimButton: {fileID: 1039340458}
   _openChestButton: {fileID: 483937870}
   _chestCanvas: {fileID: 1366373939}
-  _moneyView: {fileID: 1697558307}
 --- !u!82 &1383927640
 AudioSource:
   m_ObjectHideFlags: 0
@@ -63921,16 +63969,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _wheelRotator: {fileID: 245912196}
   prizeCardsController: {fileID: 1218606153}
-  _playerController:
-    _startGoldValue: 0
-    _startGemsValue: 0
-    _startSpinsCount: 0
   _spinAnimationsController: {fileID: 740847888}
   _chestAnimationsController: {fileID: 1383927639}
+  _auraController: {fileID: 1934798495}
   _spinsCountView: {fileID: 1694125772}
   _prizesView: {fileID: 1969051209}
   _moneyView: {fileID: 1697558307}
-  _auraController: {fileID: 1934798495}
 --- !u!4 &2068164378
 Transform:
   m_ObjectHideFlags: 0

@@ -1868,6 +1868,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623484488}
   m_CullTransparentMesh: 1
+--- !u!1 &714168570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 714168572}
+  - component: {fileID: 714168571}
+  m_Layer: 0
+  m_Name: AchievementsLifeTimeScope
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &714168571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714168570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8741bfeecb27447890c5e3d73a97a88e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentReference:
+    TypeName: RootLifeTimeScope
+  autoRun: 1
+  autoInjectGameObjects:
+  - {fileID: 1014175182}
+--- !u!4 &714168572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714168570}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 457.12848, y: -424.86676, z: 0.4006341}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &727820782
 GameObject:
   m_ObjectHideFlags: 0
@@ -3054,12 +3103,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 498937f4928f4b01851ad6fd0b2219eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _achievementSettings:
+  _achievementConfig:
   - {fileID: 11400000, guid: bbb00ec134958441d84d1c212c1e1c05, type: 2}
   - {fileID: 11400000, guid: b495f383a89dc4b38bd620d4de79c441, type: 2}
   - {fileID: 11400000, guid: a1983aee65f884a4293604a3b3854b95, type: 2}
   - {fileID: 11400000, guid: 4e6b90af3be294cea9747a889a419501, type: 2}
-  _achievementControllerPrefab: {fileID: 5490356805432941694, guid: 7fd9a076436204df98aae814937b3a6d, type: 3}
+  _achievementPrefab: {fileID: 5490356805432941694, guid: 7fd9a076436204df98aae814937b3a6d, type: 3}
   _animatedRewards:
   - {fileID: 1821125623}
   - {fileID: 54033099}

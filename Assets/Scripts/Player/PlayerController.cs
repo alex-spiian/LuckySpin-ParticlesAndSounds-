@@ -1,30 +1,25 @@
 using System;
 using System.Collections.Generic;
 using DefaultNamespace;
+using Player;
 using UnityEngine;
 using UnityEngine.Serialization;
+using VContainer;
 
-[Serializable]
 public class PlayerController
 {
     public Action OnSpinsCountChanged;
     public Action<Hero> OnHeroBought;
-    
-    [SerializeField] private float _startGoldValue;
-    [SerializeField] private float _startGemsValue;
-    
-    [SerializeField] private int _startSpinsCount;
     public Wallet Wallet { get; private set; }
     private int _spinsCount;
+    private PlayerConfig _playerConfig;
 
-    
-    private void Awake()
+    [Inject]
+    public void Construct(PlayerConfig playerConfig)
     {
+        _playerConfig = playerConfig;
         OnSpinsCountChanged?.Invoke();
     }
-    public bool HaveEnoughGold(float price) => Wallet.GoldAmount >= price;
-
-    public bool HaveEnoughGems(float price) => Wallet.GemsAmount >= price;
 
     public void SpendSpin()
     {
@@ -32,11 +27,10 @@ public class PlayerController
         PlayerPrefs.SetInt(PlayerPrefsNames.SPINS, _spinsCount);
         OnSpinsCountChanged?.Invoke();
     }
-
-
+    
     public void TryBuyHero(Hero hero)
     {
-        if (!HaveEnoughGold(hero.Price)) return;
+        if (!Wallet.HasEnoughGold(hero.Price)) return;
         
         PlayerPrefs.SetString(hero.Name, PlayerPrefsNames.BOUGHT);
         OnHeroBought?.Invoke(hero);
@@ -47,17 +41,16 @@ public class PlayerController
     {
         Wallet.AddGold(PlayerPrefs.GetInt(PlayerPrefsNames.WON + PlayerPrefsNames.GOLD) * GlobalConstants.GOLD_MULTIPLICATOR);
         Wallet.AddGems(PlayerPrefs.GetInt(PlayerPrefsNames.WON + PlayerPrefsNames.GEM) * GlobalConstants.GEMS_MULTIPLICATOR);
-        
     }
 
     public void SetDefaultInformation()
     {
-        PlayerPrefs.SetFloat(PlayerPrefsNames.GOLD, _startGoldValue);
-        PlayerPrefs.SetFloat(PlayerPrefsNames.GEM, _startGemsValue);
-        PlayerPrefs.SetInt(PlayerPrefsNames.SPINS, _startSpinsCount);
+        PlayerPrefs.SetFloat(PlayerPrefsNames.GOLD, _playerConfig.StartGoldValue);
+        PlayerPrefs.SetFloat(PlayerPrefsNames.GEM, _playerConfig.StartGemsValue);
+        PlayerPrefs.SetInt(PlayerPrefsNames.SPINS, _playerConfig.StartSpinsCount);
 
-        Wallet = new Wallet(_startGoldValue, _startGemsValue);
-        _spinsCount = _startSpinsCount;
+        Wallet = new Wallet(_playerConfig.StartGoldValue, _playerConfig.StartGemsValue);
+        _spinsCount = _playerConfig.StartSpinsCount;
     }
 
     public void LoadSavedInformation()

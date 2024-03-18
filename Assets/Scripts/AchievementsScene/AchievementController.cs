@@ -3,6 +3,7 @@ using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
+using VContainer;
 
 namespace AchievementsScene
 {
@@ -28,12 +29,10 @@ namespace AchievementsScene
 
         private void Awake()
         {
-            _playerController = GameController.Instance.GetPlayerController;
             _claimButton.onClick.AddListener(Claim);
         }
-
         public void Initialize(string rewardName, float amount, MoneyView moneyView,
-            GameObject animatedReward, GameObject darkScreen, GameObject darkAnimatedCover)
+            GameObject animatedReward, GameObject darkScreen, GameObject darkAnimatedCover, PlayerController playerController)
         {
             RewardName = rewardName;
             _amount = amount;
@@ -41,6 +40,7 @@ namespace AchievementsScene
             _animatedReward = animatedReward;
             _darkScreen = darkScreen;
             _darkAnimatedCover = darkAnimatedCover;
+            _playerController = playerController;
         }
         
         private void Claim()
@@ -74,9 +74,9 @@ namespace AchievementsScene
             _darkAnimatedCover.SetActive(true);
         }
 
-        public void FillLabels(AchievementSettings achievementSettings)
+        public void FillLabels(AchievementConfig achievementConfig)
         {
-            _achievementView.InitializeLabels(achievementSettings);
+            _achievementView.InitializeLabels(achievementConfig);
         }
     }
 }

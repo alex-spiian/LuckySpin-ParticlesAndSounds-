@@ -14,15 +14,15 @@ namespace AchievementsScene
         [field:SerializeField] public TextMeshProUGUI Description { get; private set; }
         [field:SerializeField] public TextMeshProUGUI Amount { get; private set; }
         
-        public void InitializeLabels(AchievementSettings achievementSettings)
+        public void InitializeLabels(AchievementConfig achievementConfig)
         {
-            Name.text = achievementSettings.Name;
-            Icon.sprite = achievementSettings.Icon;
-            Description.text = achievementSettings.Description;
-            RewardIcon.sprite = achievementSettings.Prize;
-            Amount.text = achievementSettings.Amount.ToString();
+            Name.text = achievementConfig.Name;
+            Icon.sprite = achievementConfig.Icon;
+            Description.text = achievementConfig.Description;
+            RewardIcon.sprite = achievementConfig.Prize;
+            Amount.text = achievementConfig.Amount.ToString();
             
-            if (achievementSettings.Type is GlobalConstants.INVENTORY or GlobalConstants.CHARACTER)
+            if (achievementConfig.Type is GlobalConstants.INVENTORY or GlobalConstants.CHARACTER)
             {
                 Amount.gameObject.SetActive(false);
             }

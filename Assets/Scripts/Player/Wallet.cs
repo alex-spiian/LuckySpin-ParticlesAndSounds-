@@ -49,6 +49,16 @@ namespace DefaultNamespace
             PlayerPrefs.SetFloat(PlayerPrefsNames.GEM, GemsAmount);
             OmMoneyValueChanged?.Invoke();
         }
+
+        public bool HasEnoughGold(float amount)
+        {
+            return GoldAmount >= amount;
+        }
+        
+        public bool HasEnoughGems(float amount)
+        {
+            return GemsAmount >= amount;
+        }
         
     }
 }

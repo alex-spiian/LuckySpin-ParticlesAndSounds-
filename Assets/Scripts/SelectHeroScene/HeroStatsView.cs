@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace DefaultNamespace.SelectHeroScene
+namespace SelectHeroScene
 {
     [Serializable]
     

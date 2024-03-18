@@ -5,6 +5,7 @@ using PrizeCards;
 using Spin;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using VContainer;
 
 public class LuckySpinSceneController : MonoBehaviour
 {
@@ -24,8 +25,6 @@ public class LuckySpinSceneController : MonoBehaviour
 
     private void Awake()
     {
-        _playerController = GameController.Instance.GetPlayerController;
-        
         _wheelRotator.OnWheelStopped += prizeCardsController.SwitchWonCardOn;
         _wheelRotator.OnWheelStopped += _auraController.Stop;
         
@@ -33,13 +32,19 @@ public class LuckySpinSceneController : MonoBehaviour
         _wheelRotator.OnWheelRotation += _spinAnimationsController.PlayFlyAnimation;
         _wheelRotator.OnWheelRotation += _auraController.Play;
 
-        _playerController.OnSpinsCountChanged += _chestAnimationsController.SetNewSpinsValue;
-        _playerController.OnSpinsCountChanged += _spinsCountView.UpdateSpinsCount;
-
         _chestAnimationsController.OnChestOpened += _prizesView.UpdatePrizesCount;
         _chestAnimationsController.OnChestClosed += _playerController.UpdateWonPrizesValue;
         _chestAnimationsController.OnChestClosed += _moneyView.UpdateMoneyView;
 
+    }
+    
+    [Inject]
+    public void Construct(PlayerController playerController)
+    {
+        _playerController = playerController;
+        
+        _playerController.OnSpinsCountChanged += _chestAnimationsController.SetNewSpinsValue;
+        _playerController.OnSpinsCountChanged += _spinsCountView.UpdateSpinsCount;
     }
     
     

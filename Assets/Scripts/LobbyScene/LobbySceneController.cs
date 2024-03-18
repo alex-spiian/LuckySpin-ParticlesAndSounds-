@@ -1,6 +1,7 @@
 using DefaultNamespace;
 using DefaultNamespace.SceneController;
 using UnityEngine;
+using VContainer;
 
 public class LobbySceneController : MonoBehaviour
 {
@@ -10,13 +11,11 @@ public class LobbySceneController : MonoBehaviour
     [SerializeField] private MoneyView _moneyView;
 
     private HeroesController _heroesController;
-    
+
     private void Awake()
     {
         _heroesController = GameController.Instance.GetHeroesController;
-        
-        LoadPlayersPrefs();
-        
+
         if (PlayerPrefs.GetInt(PlayerPrefsNames.SPINS) == 0)
         {
             _dayliGiftButton.SetActive(false);
@@ -25,7 +24,12 @@ public class LobbySceneController : MonoBehaviour
         InstantiateHero();
         _uiLobbySceneView.UpdateHeroInformation(_heroesController.GetCurrentHero());
         _moneyView.UpdateMoneyView();
-        
+    }
+
+    [Inject]
+    public void Construct(PlayerController playerController)
+    {
+        LoadPlayersPrefs(playerController);
     }
 
     private void InstantiateHero()
@@ -35,17 +39,17 @@ public class LobbySceneController : MonoBehaviour
         
     }
 
-    private void LoadPlayersPrefs()
+    private void LoadPlayersPrefs(PlayerController playerController)
     {
         if (PlayerPrefs.GetInt(PlayerPrefsNames.GAIM_RANNING_COUNT, 0) == 0)
         {
-            GameController.Instance.GetPlayerController.SetDefaultInformation();
+            playerController.SetDefaultInformation();
             PlayerPrefs.SetInt(PlayerPrefsNames.GAIM_RANNING_COUNT, 1);
             PlayerPrefs.Save();
         }
         else
         {
-            GameController.Instance.GetPlayerController.LoadSavedInformation();
+            playerController.LoadSavedInformation();
         }
     }
     
