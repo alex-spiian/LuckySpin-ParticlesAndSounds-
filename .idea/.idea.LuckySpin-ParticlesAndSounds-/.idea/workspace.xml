@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58432585-d8cd-4798-baef-96f835628278" name="Changes" comment="lobby scene refactoring" />
+    <list default="true" id="58432585-d8cd-4798-baef-96f835628278" name="Changes" comment="added simple even bus and object pool">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/EventStreems.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/EventStreems.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MoneyValueChangedEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MoneyValueChangedEvent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/RewardWasGotEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/RewardWasGotEvent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/RewardsWereClaimedEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/RewardsWereClaimedEvent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/LuckySpinScene/Chest/Chest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/LuckySpinScene/Chest/Chest.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/LuckySpinScene/Chest/ChestController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/LuckySpinScene/Chest/ChestController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Reward.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Reward/CardTypes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Reward/CardTypes.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Reward/IReward.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Reward/IReward.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Reward/Reward.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Reward/Reward.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Reward/RewardTypes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Reward/RewardTypes.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LuckySpin-ParticlesAndSounds-/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LuckySpin-ParticlesAndSounds-/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/SkeletonCard/SkeletonCardAnimation.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/SkeletonCard/SkeletonCardAnimation.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LuckySpinScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LuckySpinScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementPlaquesCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementPlaquesCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LuckySpinScene/Chest/ChestAnimationsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LuckySpinScene/Chest/ChestAnimationsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LuckySpinScene/LuckySpinSceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LuckySpinScene/LuckySpinSceneController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LuckySpinScene/PrizeCards/PrizesView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LuckySpinScene/PrizeCards/PrizesView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MoneyView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MoneyView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Wallet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Wallet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SelectHeroScene/SelectHeroSceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SelectHeroScene/SelectHeroSceneController.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -187,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711029443379</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added simple even bus and object pool">
+      <created>1711030328919</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1711030328919</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,7 +269,8 @@
     <MESSAGE value="refactor" />
     <MESSAGE value="fixed heroes spawner, added new flash scene" />
     <MESSAGE value="lobby scene refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="lobby scene refactoring" />
+    <MESSAGE value="added simple even bus and object pool" />
+    <option name="LAST_COMMIT_MESSAGE" value="added simple even bus and object pool" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -252,32 +293,6 @@
           <line>49</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Prefabs/Achievements/ContentController.cs" initialLine="55" containingFunctionPresentation="method 'CreateShadowEffect'" />
           <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementController.cs</url>
-          <line>47</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementController.cs" initialLine="48" containingFunctionPresentation="method 'Claim'">
-            <startOffsets>
-              <option value="1474" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1506" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementController.cs</url>
-          <line>30</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/AchievementsScene/AchievementController.cs" initialLine="29" containingFunctionPresentation="method 'Awake'">
-            <startOffsets>
-              <option value="828" />
-            </startOffsets>
-            <endOffsets>
-              <option value="829" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/LobbyScene/UILobbySceneView.cs</url>

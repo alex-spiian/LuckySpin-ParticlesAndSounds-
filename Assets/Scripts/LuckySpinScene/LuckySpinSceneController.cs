@@ -1,4 +1,5 @@
 using DefaultNamespace;
+using Events;
 using FortuneWheel;
 using Particles;
 using PrizeCards;
@@ -25,16 +26,15 @@ public class LuckySpinSceneController : MonoBehaviour
 
     private void Awake()
     {
+        _wheelRotator.OnWheelRotation += OnWheelStartedRotating;
+
         _wheelRotator.OnWheelStopped += prizeCardsController.SwitchWonCardOn;
         _wheelRotator.OnWheelStopped += _auraController.Stop;
         
-        _wheelRotator.OnWheelRotation += _playerController.SpendSpin;
-        _wheelRotator.OnWheelRotation += _spinAnimationsController.PlayFlyAnimation;
-        _wheelRotator.OnWheelRotation += _auraController.Play;
-
         _chestAnimationsController.OnChestOpened += _prizesView.UpdatePrizesCount;
+        
         _chestAnimationsController.OnChestClosed += _playerController.UpdateWonPrizesValue;
-        _chestAnimationsController.OnChestClosed += _moneyView.UpdateMoneyView;
+        //_chestAnimationsController.OnChestClosed += _moneyView.UpdateMoneyView;
 
     }
     
@@ -46,22 +46,27 @@ public class LuckySpinSceneController : MonoBehaviour
         _playerController.OnSpinsCountChanged += _chestAnimationsController.SetNewSpinsValue;
         _playerController.OnSpinsCountChanged += _spinsCountView.UpdateSpinsCount;
     }
+
+    private void OnWheelStartedRotating()
+    {
+        _playerController.SpendSpin();
+        _spinAnimationsController.PlayFlyAnimation();
+        _auraController.Play();
+    }
     
     
     private void OnDestroy()
     {
+        _wheelRotator.OnWheelRotation -= OnWheelStartedRotating;
+
         _wheelRotator.OnWheelStopped -= prizeCardsController.SwitchWonCardOn;
         _wheelRotator.OnWheelStopped -= _auraController.Stop;
-        
-        _wheelRotator.OnWheelRotation -= _playerController.SpendSpin;
-        _wheelRotator.OnWheelRotation -= _spinAnimationsController.PlayFlyAnimation;
-        _wheelRotator.OnWheelRotation -= _auraController.Play;
 
         _playerController.OnSpinsCountChanged -= _chestAnimationsController.SetNewSpinsValue;
         _playerController.OnSpinsCountChanged -= _spinsCountView.UpdateSpinsCount;
 
         _chestAnimationsController.OnChestOpened -= _prizesView.UpdatePrizesCount;
-        _chestAnimationsController.OnChestClosed -= _moneyView.UpdateMoneyView;
+       // _chestAnimationsController.OnChestClosed -= _moneyView.UpdateMoneyView;
         _chestAnimationsController.OnChestClosed -= _playerController.UpdateWonPrizesValue;
 
     }

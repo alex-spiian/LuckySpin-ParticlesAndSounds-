@@ -13,6 +13,8 @@ public class PrizesView : MonoBehaviour
 
    public void UpdatePrizesCount()
    {
+      // when the chest will be opened this method wil run and sets value for each reward
+      
       _goldCount.text = "x " + PlayerPrefs.GetInt(PlayerPrefsNames.WON + GlobalConstants.GOLD_TAG) *
          GlobalConstants.GOLD_MULTIPLICATOR;
       

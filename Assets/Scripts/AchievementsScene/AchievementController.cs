@@ -20,7 +20,6 @@ namespace AchievementsScene
         private AchievementView _achievementView;
         
         private PlayerController _playerController;
-        private MoneyView _moneyView;
         private float _amount;
         
         private GameObject _animatedReward;
@@ -31,12 +30,11 @@ namespace AchievementsScene
         {
             _claimButton.onClick.AddListener(Claim);
         }
-        public void Initialize(string rewardName, float amount, MoneyView moneyView,
+        public void Initialize(string rewardName, float amount,
             GameObject animatedReward, GameObject darkScreen, GameObject darkAnimatedCover, PlayerController playerController)
         {
             RewardName = rewardName;
             _amount = amount;
-            _moneyView = moneyView;
             _animatedReward = animatedReward;
             _darkScreen = darkScreen;
             _darkAnimatedCover = darkAnimatedCover;
@@ -63,7 +61,6 @@ namespace AchievementsScene
                     break;
             }
         
-            _moneyView.UpdateMoneyView();
             PlayerPrefs.SetString(RewardName, GlobalConstants.COLLECTED);
         }
         

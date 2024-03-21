@@ -1,4 +1,5 @@
 using System;
+using Events;
 using TMPro;
 using UnityEngine;
 
@@ -10,15 +11,13 @@ namespace DefaultNamespace
         [SerializeField] private TextMeshProUGUI _gemesValue;
         private void Awake()
         {
-            UpdateMoneyView();
+            EventStreams.Global.Subscribe<MoneyValueChangedEvent>(UpdateMoneyView);
         }
 
-        public void UpdateMoneyView()
+        public void UpdateMoneyView(MoneyValueChangedEvent moneyValueChangedEvent)
         {
-            _goldValue.text = PlayerPrefs.GetFloat(PlayerPrefsNames.GOLD).ToString("N0");
-            _gemesValue.text = PlayerPrefs.GetFloat(PlayerPrefsNames.GEM).ToString("N0");
+            _goldValue.text = moneyValueChangedEvent.Gold.ToString();
+            _gemesValue.text = moneyValueChangedEvent.Gems.ToString();
         }
-
-      
     }
 }

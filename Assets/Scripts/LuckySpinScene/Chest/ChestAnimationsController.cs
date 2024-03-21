@@ -20,7 +20,6 @@ public class ChestAnimationsController : MonoBehaviour
     {
         if (PlayerPrefs.GetInt(PlayerPrefsNames.SPINS) == 0)
         {
-            // order in layer to be above the dark screen mode = 4
             _chestCanvas.sortingOrder = GlobalConstants.CHEST_ORDER_TO_BE_ABOVE_DARK_SCREEN;
             
             _openChestButton.interactable = true;
@@ -41,11 +40,6 @@ public class ChestAnimationsController : MonoBehaviour
         _openChestButton.interactable = false;
     }
     
-    public void SetClaimButtonInteractable()
-    {
-        _audioSource.Stop();
-        _claimButton.interactable = true;
-    }
     public void HideChest()
     {
         OnChestClosed?.Invoke();

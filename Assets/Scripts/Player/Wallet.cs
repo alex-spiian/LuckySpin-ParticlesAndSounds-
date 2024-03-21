@@ -1,4 +1,5 @@
 using System;
+using Events;
 using UnityEngine;
 
 namespace DefaultNamespace
@@ -6,7 +7,6 @@ namespace DefaultNamespace
     [Serializable]
     public class Wallet
     {
-        public event Action OmMoneyValueChanged;
         public float GoldAmount { get; private set; }
         public float GemsAmount { get; private set; }
         public Wallet(float gold, float gems)
@@ -20,7 +20,7 @@ namespace DefaultNamespace
             {
                 GoldAmount -= price;
                 PlayerPrefs.SetFloat(PlayerPrefsNames.GOLD, GoldAmount);
-                OmMoneyValueChanged?.Invoke();
+                EventStreams.Global.Publish(new MoneyValueChangedEvent(GoldAmount, GemsAmount));
             }
         }
         
@@ -30,7 +30,7 @@ namespace DefaultNamespace
             {
                 GemsAmount -= price;
                 PlayerPrefs.SetFloat(PlayerPrefsNames.GEM, GemsAmount);
-                OmMoneyValueChanged?.Invoke();
+                EventStreams.Global.Publish(new MoneyValueChangedEvent(GoldAmount, GemsAmount));
             }
 
         }
@@ -39,14 +39,14 @@ namespace DefaultNamespace
         {
             GoldAmount += amount;
             PlayerPrefs.SetFloat(PlayerPrefsNames.GOLD, GoldAmount);
-            OmMoneyValueChanged?.Invoke();
+            EventStreams.Global.Publish(new MoneyValueChangedEvent(GoldAmount, GemsAmount));
         }
         
         public void AddGems(float amount)
         {
             GemsAmount += amount;
             PlayerPrefs.SetFloat(PlayerPrefsNames.GEM, GemsAmount);
-            OmMoneyValueChanged?.Invoke();
+            EventStreams.Global.Publish(new MoneyValueChangedEvent(GoldAmount, GemsAmount));
         }
 
         public bool HasEnoughGold(float amount)

@@ -17,8 +17,6 @@ namespace AchievementsScene
         [SerializeField]
         private GameObject _darkScreen;
         [SerializeField]
-        private MoneyView _moneyView;
-        [SerializeField]
         private GameObject _darkAnimatedObjectPrefab;
 
         private AchievementController _achievementController;
@@ -66,7 +64,7 @@ namespace AchievementsScene
             var darkAnimatedCover = Instantiate(_darkAnimatedObjectPrefab,_achievementController.gameObject.transform);
             darkAnimatedCover.SetActive(false);
             
-            _achievementController.Initialize(rewardName, amount, _moneyView, 
+            _achievementController.Initialize(rewardName, amount, 
                 GetCurrentAnimatedReward(), _darkScreen, darkAnimatedCover, _playerController);
         }
     }

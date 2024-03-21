@@ -5703,8 +5703,8 @@ GameObject:
   - component: {fileID: 127219599}
   - component: {fileID: 127219598}
   - component: {fileID: 127219600}
-  - component: {fileID: 127219601}
   - component: {fileID: 127219602}
+  - component: {fileID: 127219603}
   m_Layer: 5
   m_Name: SkeletonCard
   m_TagString: Skeleton
@@ -5796,73 +5796,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &127219601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 127219596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86125bd3506541178cae5d9c7c00eccf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnAnimationEndedPlaying:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1123371652}
-        m_TargetAssemblyTypeName: DefaultNamespace.DarkModeController, Assembly-CSharp
-        m_MethodName: ResetDarkScreenMode
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1383927639}
-        m_TargetAssemblyTypeName: ChestAnimationsController, Assembly-CSharp
-        m_MethodName: ChestToTheMiddle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnCardIsInChest:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1123371652}
-        m_TargetAssemblyTypeName: DefaultNamespace.DarkModeController, Assembly-CSharp
-        m_MethodName: ResetDarkScreenMode
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1383927639}
-        m_TargetAssemblyTypeName: ChestAnimationsController, Assembly-CSharp
-        m_MethodName: ScaleChest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _darkModeController: {fileID: 1123371652}
 --- !u!82 &127219602
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5959,6 +5892,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &127219603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127219596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b1d15b456c4a38aa6bc2c6ba24435c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RewardType>k__BackingField: 4
+  <CardType>k__BackingField: 1
+  <Amount>k__BackingField: 0
+  _darkModeController: {fileID: 0}
 --- !u!1 &129527771
 GameObject:
   m_ObjectHideFlags: 0
@@ -12533,7 +12482,7 @@ GameObject:
   m_Component:
   - component: {fileID: 517307603}
   m_Layer: 5
-  m_Name: Chest
+  m_Name: ChestObjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17640,8 +17589,8 @@ GameObject:
   - component: {fileID: 540971701}
   - component: {fileID: 540971700}
   - component: {fileID: 540971699}
-  - component: {fileID: 540971702}
   - component: {fileID: 540971703}
+  - component: {fileID: 540971704}
   m_Layer: 5
   m_Name: GemCard
   m_TagString: Gem
@@ -17734,73 +17683,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 540971697}
   m_CullTransparentMesh: 1
---- !u!114 &540971702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 540971697}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86125bd3506541178cae5d9c7c00eccf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnAnimationEndedPlaying:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1123371652}
-        m_TargetAssemblyTypeName: DefaultNamespace.DarkModeController, Assembly-CSharp
-        m_MethodName: ResetDarkScreenMode
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1383927639}
-        m_TargetAssemblyTypeName: ChestAnimationsController, Assembly-CSharp
-        m_MethodName: ChestToTheMiddle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnCardIsInChest:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1123371652}
-        m_TargetAssemblyTypeName: DefaultNamespace.DarkModeController, Assembly-CSharp
-        m_MethodName: ResetDarkScreenMode
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1383927639}
-        m_TargetAssemblyTypeName: ChestAnimationsController, Assembly-CSharp
-        m_MethodName: ScaleChest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _darkModeController: {fileID: 1123371652}
 --- !u!82 &540971703
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17897,6 +17779,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &540971704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540971697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b1d15b456c4a38aa6bc2c6ba24435c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RewardType>k__BackingField: 1
+  <CardType>k__BackingField: 0
+  <Amount>k__BackingField: 2
+  _darkModeController: {fileID: 0}
 --- !u!1 &555414061
 GameObject:
   m_ObjectHideFlags: 0
@@ -34479,8 +34377,8 @@ GameObject:
   - component: {fileID: 895991995}
   - component: {fileID: 895991994}
   - component: {fileID: 895991993}
-  - component: {fileID: 895991996}
   - component: {fileID: 895991997}
+  - component: {fileID: 895991998}
   m_Layer: 5
   m_Name: MysteryRelicCard
   m_TagString: Rune
@@ -34572,73 +34470,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 895991991}
   m_CullTransparentMesh: 1
---- !u!114 &895991996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 895991991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86125bd3506541178cae5d9c7c00eccf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnAnimationEndedPlaying:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1123371652}
-        m_TargetAssemblyTypeName: DefaultNamespace.DarkModeController, Assembly-CSharp
-        m_MethodName: ResetDarkScreenMode
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1383927639}
-        m_TargetAssemblyTypeName: ChestAnimationsController, Assembly-CSharp
-        m_MethodName: ChestToTheMiddle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnCardIsInChest:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1123371652}
-        m_TargetAssemblyTypeName: DefaultNamespace.DarkModeController, Assembly-CSharp
-        m_MethodName: ResetDarkScreenMode
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1383927639}
-        m_TargetAssemblyTypeName: ChestAnimationsController, Assembly-CSharp
-        m_MethodName: ScaleChest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _darkModeController: {fileID: 1123371652}
 --- !u!82 &895991997
 AudioSource:
   m_ObjectHideFlags: 0
@@ -34735,6 +34566,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &895991998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895991991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b1d15b456c4a38aa6bc2c6ba24435c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RewardType>k__BackingField: 3
+  <CardType>k__BackingField: 0
+  <Amount>k__BackingField: 1
+  _darkModeController: {fileID: 0}
 --- !u!1 &903316143
 GameObject:
   m_ObjectHideFlags: 0
@@ -51542,8 +51389,9 @@ GameObject:
   - component: {fileID: 1383927638}
   - component: {fileID: 1383927639}
   - component: {fileID: 1383927640}
+  - component: {fileID: 1383927641}
   m_Layer: 5
-  m_Name: ChestIcon
+  m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51749,6 +51597,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1383927641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383927634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 287e8d8a53eb422cb5914990ca256ee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationsController: {fileID: 1383927639}
 --- !u!1 &1434049598
 GameObject:
   m_ObjectHideFlags: 0
@@ -53117,8 +52978,8 @@ GameObject:
   - component: {fileID: 1860313998}
   - component: {fileID: 1860313997}
   - component: {fileID: 1860313996}
-  - component: {fileID: 1860313999}
   - component: {fileID: 1860314000}
+  - component: {fileID: 1860314001}
   m_Layer: 5
   m_Name: GoldCard
   m_TagString: Gold
@@ -53211,73 +53072,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1860313994}
   m_CullTransparentMesh: 1
---- !u!114 &1860313999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1860313994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86125bd3506541178cae5d9c7c00eccf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnAnimationEndedPlaying:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1123371652}
-        m_TargetAssemblyTypeName: DefaultNamespace.DarkModeController, Assembly-CSharp
-        m_MethodName: ResetDarkScreenMode
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1383927639}
-        m_TargetAssemblyTypeName: ChestAnimationsController, Assembly-CSharp
-        m_MethodName: ChestToTheMiddle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnCardIsInChest:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1123371652}
-        m_TargetAssemblyTypeName: DefaultNamespace.DarkModeController, Assembly-CSharp
-        m_MethodName: ResetDarkScreenMode
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1383927639}
-        m_TargetAssemblyTypeName: ChestAnimationsController, Assembly-CSharp
-        m_MethodName: ScaleChest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _darkModeController: {fileID: 1123371652}
 --- !u!82 &1860314000
 AudioSource:
   m_ObjectHideFlags: 0
@@ -53374,6 +53168,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1860314001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860313994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b1d15b456c4a38aa6bc2c6ba24435c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RewardType>k__BackingField: 0
+  <CardType>k__BackingField: 0
+  <Amount>k__BackingField: 50
+  _darkModeController: {fileID: 0}
 --- !u!1 &1871048106
 GameObject:
   m_ObjectHideFlags: 0
@@ -53462,8 +53272,8 @@ GameObject:
   - component: {fileID: 1880731830}
   - component: {fileID: 1880731829}
   - component: {fileID: 1880731828}
-  - component: {fileID: 1880731831}
   - component: {fileID: 1880731832}
+  - component: {fileID: 1880731833}
   m_Layer: 5
   m_Name: LifeCard
   m_TagString: Heart
@@ -53556,73 +53366,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880731826}
   m_CullTransparentMesh: 1
---- !u!114 &1880731831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1880731826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86125bd3506541178cae5d9c7c00eccf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnAnimationEndedPlaying:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1123371652}
-        m_TargetAssemblyTypeName: DefaultNamespace.DarkModeController, Assembly-CSharp
-        m_MethodName: ResetDarkScreenMode
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1383927639}
-        m_TargetAssemblyTypeName: ChestAnimationsController, Assembly-CSharp
-        m_MethodName: ChestToTheMiddle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnCardIsInChest:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1123371652}
-        m_TargetAssemblyTypeName: DefaultNamespace.DarkModeController, Assembly-CSharp
-        m_MethodName: ResetDarkScreenMode
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1383927639}
-        m_TargetAssemblyTypeName: ChestAnimationsController, Assembly-CSharp
-        m_MethodName: ScaleChest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _darkModeController: {fileID: 1123371652}
 --- !u!82 &1880731832
 AudioSource:
   m_ObjectHideFlags: 0
@@ -53719,6 +53462,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1880731833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880731826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b1d15b456c4a38aa6bc2c6ba24435c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RewardType>k__BackingField: 2
+  <CardType>k__BackingField: 0
+  <Amount>k__BackingField: 1
+  _darkModeController: {fileID: 0}
 --- !u!1 &1920656746
 GameObject:
   m_ObjectHideFlags: 0

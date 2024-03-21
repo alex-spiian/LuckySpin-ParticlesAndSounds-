@@ -19,7 +19,6 @@ namespace SelectHeroScene
         {
             _playerController = playerController;
 
-            _playerController.Wallet.OmMoneyValueChanged += _moneyView.UpdateMoneyView;
             _playerController.OnHeroBought += _uiSelectHeroSceneView.ChangeStateOfButtonsBuyAndSelect;
             _heroesSpawner = heroesSpawner;
             heroesSpawner.SpawnCurrentHero();
@@ -33,7 +32,6 @@ namespace SelectHeroScene
             _heroesSpawner.OnHeroChanged -= _uiSelectHeroSceneView.UpdateHeroInformation;
             _heroesSpawner.OnHeroChanged -= _uiSelectHeroSceneView.ChangeStateOfButtonsBuyAndSelect;
 
-            _playerController.Wallet.OmMoneyValueChanged -= _moneyView.UpdateMoneyView;
             _playerController.OnHeroBought -= _uiSelectHeroSceneView.ChangeStateOfButtonsBuyAndSelect;
         }
         
