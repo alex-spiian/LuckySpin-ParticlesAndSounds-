@@ -8,18 +8,43 @@ namespace Hero
     public class HeroesSpawner : MonoBehaviour
     {
         public event Action<Hero> OnHeroChanged;
-        [SerializeField] private Hero[] _heroesPrefabs;
-        
+        [SerializeField]
+        private Hero[] _availableHeroes;
         public Hero CurrentHero { get; private set; }
         private int _currentHeroIndex;
 
-        private void Awake()
+        private static HeroesSpawner _instance;
+        public static HeroesSpawner Instance
         {
-            PlayerPrefs.SetInt(PlayerPrefsNames.HEROES_COUNT, _heroesPrefabs.Length);
-            OnHeroChanged?.Invoke(_heroesPrefabs[_currentHeroIndex]);
-            DontDestroyOnLoad(gameObject);
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = FindObjectOfType<HeroesSpawner>();
+                
+                    if (_instance == null)
+                    {
+                        var singleton = new GameObject("HeroesSpawner");
+                        _instance = singleton.AddComponent<HeroesSpawner>();
+                    }
+
+                    if (_instance != null)
+                    {
+                        DontDestroyOnLoad(_instance);
+                    }
+                }
+            
+                return _instance;
+            }
         }
         
+        private void Awake()
+        {
+            PlayerPrefs.SetInt(PlayerPrefsNames.HEROES_COUNT, _availableHeroes.Length);
+            OnHeroChanged?.Invoke(_availableHeroes[_currentHeroIndex]);
+            DontDestroyOnLoad(gameObject);
+        }
+
         public void NextHero()
         {
             var availableHeroesCount = PlayerPrefs.GetInt(PlayerPrefsNames.HEROES_COUNT);
@@ -50,7 +75,7 @@ namespace Hero
         public void SpawnCurrentHero()
         {
             var currentIndex = PlayerPrefs.GetInt(PlayerPrefsNames.CURRENT_HERO);
-            var currentHeroPrefab = _heroesPrefabs[currentIndex];
+            var currentHeroPrefab = _availableHeroes[currentIndex];
 
             CurrentHero = Instantiate(currentHeroPrefab, transform);
         }

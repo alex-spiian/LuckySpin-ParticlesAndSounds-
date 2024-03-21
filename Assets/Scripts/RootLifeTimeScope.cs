@@ -9,7 +9,6 @@ using VContainer.Unity;
 public class RootLifeTimeScope : LifetimeScope
 {
     [SerializeField] private PlayerConfig _playerConfig;
-    [SerializeField] private HeroesSpawner _heroesSpawner;
 
     protected override void Awake()
     {
@@ -23,6 +22,5 @@ public class RootLifeTimeScope : LifetimeScope
         builder.Register<PlayerController>(Lifetime.Singleton);
 
         builder.RegisterInstance(_playerConfig);
-        builder.RegisterInstance(_heroesSpawner);
     }
 }

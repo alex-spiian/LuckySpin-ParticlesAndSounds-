@@ -15,20 +15,15 @@ namespace SelectHeroScene
         private HeroesSpawner _heroesSpawner;
 
         [Inject]
-        public void Construct(PlayerController playerController, HeroesSpawner heroesSpawner)
+        public void Construct(PlayerController playerController)
         {
             _playerController = playerController;
-            if (_heroesSpawner == null)
-            {
-                _heroesSpawner = heroesSpawner;
-            }
 
             _playerController.Wallet.OmMoneyValueChanged += _moneyView.UpdateMoneyView;
             _playerController.OnHeroBought += _uiSelectHeroSceneView.ChangeStateOfButtonsBuyAndSelect;
-            
-            heroesSpawner.OnHeroChanged += _uiSelectHeroSceneView.UpdateHeroInformation;
-            heroesSpawner.OnHeroChanged += _uiSelectHeroSceneView.ChangeStateOfButtonsBuyAndSelect;
-            
+            _heroesSpawner = HeroesSpawner.Instance;
+            _heroesSpawner.OnHeroChanged += _uiSelectHeroSceneView.UpdateHeroInformation;
+            _heroesSpawner.OnHeroChanged += _uiSelectHeroSceneView.ChangeStateOfButtonsBuyAndSelect;
             UpdateInformation();
         }
 

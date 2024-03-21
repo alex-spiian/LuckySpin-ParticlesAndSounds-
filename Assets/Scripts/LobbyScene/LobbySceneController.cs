@@ -9,7 +9,6 @@ public class LobbySceneController : MonoBehaviour
     [SerializeField] private UILobbySceneView _uiLobbySceneView;
     [SerializeField] private GameObject _dayliGiftButton;
     [SerializeField] private MoneyView _moneyView;
-    [SerializeField] private HeroesSpawner _heroesSpawner;
     
     private void Awake()
     {
@@ -17,7 +16,6 @@ public class LobbySceneController : MonoBehaviour
         {
             _dayliGiftButton.SetActive(false);
         }
-        _heroesSpawner.SpawnCurrentHero();
         _moneyView.UpdateMoneyView();
     }
 
@@ -25,6 +23,7 @@ public class LobbySceneController : MonoBehaviour
     public void Construct(PlayerController playerController)
     {
         LoadPlayersPrefs(playerController);
+        HeroesSpawner.Instance.SpawnCurrentHero();
     }
 
     private void LoadPlayersPrefs(PlayerController playerController)
