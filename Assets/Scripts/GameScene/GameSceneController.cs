@@ -14,9 +14,10 @@ namespace GameScene
         [SerializeField] private Camera _camera;
         private NavMeshAgent _navMeshAgent;
 
-        private void Awake()
+        [Inject]
+        private void Construct(HeroesSpawner heroesSpawner)
         {
-            StartGame(HeroesSpawner.Instance);
+            StartGame(heroesSpawner);
         }
         private void StartGame(HeroesSpawner heroesSpawner)
         {

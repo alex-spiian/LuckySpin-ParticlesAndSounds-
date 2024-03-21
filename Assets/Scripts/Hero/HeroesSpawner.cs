@@ -10,74 +10,47 @@ namespace Hero
         public event Action<Hero> OnHeroChanged;
         [SerializeField]
         private Hero[] _availableHeroes;
+        [SerializeField]
+        private Vector3 _spawnPosition;
         public Hero CurrentHero { get; private set; }
         private int _currentHeroIndex;
 
-        private static HeroesSpawner _instance;
-        public static HeroesSpawner Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = FindObjectOfType<HeroesSpawner>();
-                
-                    if (_instance == null)
-                    {
-                        var singleton = new GameObject("HeroesSpawner");
-                        _instance = singleton.AddComponent<HeroesSpawner>();
-                    }
-
-                    if (_instance != null)
-                    {
-                        DontDestroyOnLoad(_instance);
-                    }
-                }
-            
-                return _instance;
-            }
-        }
-        
         private void Awake()
         {
             PlayerPrefs.SetInt(PlayerPrefsNames.HEROES_COUNT, _availableHeroes.Length);
-            OnHeroChanged?.Invoke(_availableHeroes[_currentHeroIndex]);
+            _currentHeroIndex = PlayerPrefs.GetInt(PlayerPrefsNames.CURRENT_HERO);
+            
             DontDestroyOnLoad(gameObject);
         }
 
         public void NextHero()
         {
-            var availableHeroesCount = PlayerPrefs.GetInt(PlayerPrefsNames.HEROES_COUNT);
-            var nextIndex = PlayerPrefs.GetInt(PlayerPrefsNames.CURRENT_HERO) + 1;
-            
-            if (nextIndex >= availableHeroesCount) return;
+            if (_currentHeroIndex + 1 >= _availableHeroes.Length) return;
         
-            Destroy(CurrentHero.gameObject);
-
-            PlayerPrefs.SetInt(PlayerPrefsNames.CURRENT_HERO, PlayerPrefs.GetInt(PlayerPrefsNames.CURRENT_HERO)+1);
+            _currentHeroIndex++;
+            PlayerPrefs.SetInt(PlayerPrefsNames.CURRENT_HERO, _currentHeroIndex);
             
+            Destroy(CurrentHero.gameObject);
             SpawnCurrentHero();
             OnHeroChanged?.Invoke(CurrentHero);
         }
 
         public void PreviousHero()
         {
-            var previousIndex = PlayerPrefs.GetInt(PlayerPrefsNames.CURRENT_HERO) - 1;
-            if (previousIndex < 0) return;
+            if (_currentHeroIndex - 1 < 0) return;
         
-            Destroy(CurrentHero.gameObject);
-            PlayerPrefs.SetInt(PlayerPrefsNames.CURRENT_HERO, PlayerPrefs.GetInt(PlayerPrefsNames.CURRENT_HERO)-1);
+            _currentHeroIndex--;
+            PlayerPrefs.SetInt(PlayerPrefsNames.CURRENT_HERO, _currentHeroIndex);
             
+            Destroy(CurrentHero.gameObject);
             SpawnCurrentHero();
             OnHeroChanged?.Invoke(CurrentHero);
         }
         
         public void SpawnCurrentHero()
         {
-            var currentIndex = PlayerPrefs.GetInt(PlayerPrefsNames.CURRENT_HERO);
-            var currentHeroPrefab = _availableHeroes[currentIndex];
-
-            CurrentHero = Instantiate(currentHeroPrefab, transform);
+            CurrentHero = Instantiate(_availableHeroes[_currentHeroIndex]);
+            CurrentHero.transform.position = _spawnPosition;
         }
     }
 }

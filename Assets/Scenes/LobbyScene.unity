@@ -2623,7 +2623,7 @@ GameObject:
   - component: {fileID: 916179397}
   - component: {fileID: 916179399}
   m_Layer: 0
-  m_Name: HeroesProvider
+  m_Name: HeroesSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6567,7 +6567,7 @@ GameObject:
   - component: {fileID: 1964702716}
   - component: {fileID: 1964702717}
   m_Layer: 0
-  m_Name: RootLifeTimeScope
+  m_Name: LobbyLifeTimeScope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6597,15 +6597,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1964702715}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ada59a7d86c7145cb81e3bf6de1d2a2f, type: 3}
+  m_Script: {fileID: 11500000, guid: 63851c1dd0454114a6e13ac3476ea98d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parentReference:
-    TypeName: 
+    TypeName: RootLifeTimeScope
   autoRun: 1
   autoInjectGameObjects:
   - {fileID: 1684953407}
-  _playerConfig: {fileID: 11400000, guid: 8ccc73bdf2bc14d8b92cec4941fa7834, type: 2}
 --- !u!1 &1974774493
 GameObject:
   m_ObjectHideFlags: 0

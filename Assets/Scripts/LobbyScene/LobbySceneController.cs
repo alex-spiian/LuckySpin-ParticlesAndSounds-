@@ -20,10 +20,10 @@ public class LobbySceneController : MonoBehaviour
     }
 
     [Inject]
-    public void Construct(PlayerController playerController)
+    public void Construct(PlayerController playerController, HeroesSpawner heroesSpawner)
     {
         LoadPlayersPrefs(playerController);
-        HeroesSpawner.Instance.SpawnCurrentHero();
+        heroesSpawner.SpawnCurrentHero();
     }
 
     private void LoadPlayersPrefs(PlayerController playerController)

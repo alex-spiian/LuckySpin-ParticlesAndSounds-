@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58432585-d8cd-4798-baef-96f835628278" name="Changes" comment="">
+    <list default="true" id="58432585-d8cd-4798-baef-96f835628278" name="Changes" comment="refactor">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/LobbyScene/LobbyLifeTimeScope.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/LobbyScene/LobbyLifeTimeScope.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LuckySpin-ParticlesAndSounds-/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LuckySpin-ParticlesAndSounds-/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/LobbyScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LobbyScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameScene/GameSceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameScene/GameSceneController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hero/HeroesController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hero/HeroesController.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hero/HeroesSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hero/HeroesSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LobbyScene/LobbySceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LobbyScene/LobbySceneController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/RootLifeTimeScope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RootLifeTimeScope.cs" afterDir="false" />
@@ -46,6 +51,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32feec4b1ee848ebb2d59ed6b91ce73a1a1200/bd/edb676e8/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32feec4b1ee848ebb2d59ed6b91ce73a1a1200/d2/e3815613/InvokableCall.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7b31097b49204dddb88651898a92afbc954a00/4d/7e22e80a/SerializedObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/alex-spiian/RiderProjects/LuckySpin-ParticlesAndSounds-/Assets/Scripts/GameScene/GameSceneController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hero/HeroAnimationsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hero/MovementController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RootLifeTimeScope.cs" root0="FORCE_HIGHLIGHTING" />
@@ -108,10 +114,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="48498">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="48498" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -172,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710748835711</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refactor">
+      <created>1711012774606</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1711012774606</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,7 +224,8 @@
     <MESSAGE value="more using playerRefs&#10;separated large classes" />
     <MESSAGE value="refactoring" />
     <MESSAGE value="added VContainer, injected dependencies for PlayerController using vContainer" />
-    <option name="LAST_COMMIT_MESSAGE" value="added VContainer, injected dependencies for PlayerController using vContainer" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -260,6 +274,58 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Hero/HeroesSpawner.cs</url>
+          <line>58</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Hero/HeroesSpawner.cs" initialLine="50" containingFunctionPresentation="method 'SpawnCurrentHero'">
+            <startOffsets>
+              <option value="2043" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2044" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Hero/HeroesSpawner.cs</url>
+          <line>19</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Hero/HeroesSpawner.cs" initialLine="19" containingFunctionPresentation="method 'Awake'">
+            <startOffsets>
+              <option value="486" />
+            </startOffsets>
+            <endOffsets>
+              <option value="561" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Hero/HeroesSpawner.cs</url>
+          <line>29</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Hero/HeroesSpawner.cs" initialLine="29" containingFunctionPresentation="method 'NextHero'">
+            <startOffsets>
+              <option value="861" />
+            </startOffsets>
+            <endOffsets>
+              <option value="862" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Hero/HeroesSpawner.cs</url>
+          <line>45</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Hero/HeroesSpawner.cs" initialLine="45" containingFunctionPresentation="method 'PreviousHero'">
+            <startOffsets>
+              <option value="1468" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1498" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
