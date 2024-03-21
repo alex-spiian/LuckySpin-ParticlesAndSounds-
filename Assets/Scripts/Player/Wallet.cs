@@ -9,7 +9,6 @@ namespace DefaultNamespace
         public event Action OmMoneyValueChanged;
         public float GoldAmount { get; private set; }
         public float GemsAmount { get; private set; }
-
         public Wallet(float gold, float gems)
         {
             GoldAmount = gold;

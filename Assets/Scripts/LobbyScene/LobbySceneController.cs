@@ -6,19 +6,6 @@ using VContainer;
 
 public class LobbySceneController : MonoBehaviour
 {
-    [SerializeField] private UILobbySceneView _uiLobbySceneView;
-    [SerializeField] private GameObject _dayliGiftButton;
-    [SerializeField] private MoneyView _moneyView;
-    
-    private void Awake()
-    {
-        if (PlayerPrefs.GetInt(PlayerPrefsNames.SPINS) == 0)
-        {
-            _dayliGiftButton.SetActive(false);
-        }
-        _moneyView.UpdateMoneyView();
-    }
-
     [Inject]
     public void Construct(PlayerController playerController, HeroesSpawner heroesSpawner)
     {

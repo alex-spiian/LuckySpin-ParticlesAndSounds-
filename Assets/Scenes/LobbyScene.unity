@@ -2612,57 +2612,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889506657}
   m_CullTransparentMesh: 1
---- !u!1 &916179395
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 916179397}
-  - component: {fileID: 916179399}
-  m_Layer: 0
-  m_Name: HeroesSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &916179397
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 916179395}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 60, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &916179399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 916179395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61b6eb7472614cf79bf306a7d6e071ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _availableHeroes:
-  - {fileID: -4751851643335671736, guid: 9751d0696c1ee4d8a957f177f49f1806, type: 3}
-  - {fileID: 2066554747765084027, guid: 0462945a75b007c459ba1a3bcf18cacc, type: 3}
-  - {fileID: -983992167965115185, guid: a9cc8fa955a1bb145ac83117c772c5f7, type: 3}
-  - {fileID: -2333789885612930817, guid: e886514e9250e7a418a0dd0bfb9673b1, type: 3}
-  - {fileID: 4648096207910290027, guid: e43a414ef8c04124b94fc653e5fd713b, type: 3}
-  - {fileID: -3781125182518808116, guid: 056f556e83717d945b2b7303930ae56c, type: 3}
 --- !u!1 &933089310
 GameObject:
   m_ObjectHideFlags: 0
@@ -5628,9 +5577,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a189ac4bafe4f3487a08d58bb09051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _uiLobbySceneView: {fileID: 1302545565}
-  _dayliGiftButton: {fileID: 2134987318}
-  _moneyView: {fileID: 990913795}
 --- !u!4 &1684953409
 Transform:
   m_ObjectHideFlags: 0
@@ -6605,6 +6551,7 @@ MonoBehaviour:
   autoRun: 1
   autoInjectGameObjects:
   - {fileID: 1684953407}
+  - {fileID: 1302545564}
 --- !u!1 &1974774493
 GameObject:
   m_ObjectHideFlags: 0
@@ -6959,6 +6906,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2134987319}
+  - component: {fileID: 2134987320}
   m_Layer: 5
   m_Name: DailyGift
   m_TagString: Untagged
@@ -6989,3 +6937,15 @@ RectTransform:
   m_AnchoredPosition: {x: 461.90002, y: -79.3999}
   m_SizeDelta: {x: 52, y: 52}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2134987320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134987318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43ff590ad9944e5aad7c15e63facf2b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

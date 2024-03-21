@@ -8,8 +8,6 @@ namespace DefaultNamespace
     {
         [SerializeField] private TextMeshProUGUI _goldValue;
         [SerializeField] private TextMeshProUGUI _gemesValue;
-
-        
         private void Awake()
         {
             UpdateMoneyView();
