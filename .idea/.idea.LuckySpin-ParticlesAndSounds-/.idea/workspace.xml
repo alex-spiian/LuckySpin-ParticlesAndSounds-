@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58432585-d8cd-4798-baef-96f835628278" name="Changes" comment="fixed heroes spawner, added new flash scene">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DailyGift.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DailyGift/DailyGiftController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DailyGift/DailyGiftController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LuckySpin-ParticlesAndSounds-/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LuckySpin-ParticlesAndSounds-/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LobbyScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LobbyScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LobbyScene/LobbySceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LobbyScene/LobbySceneController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LobbyScene/UILobbySceneView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LobbyScene/UILobbySceneView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MoneyView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MoneyView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Wallet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Wallet.cs" afterDir="false" />
-    </list>
+    <list default="true" id="58432585-d8cd-4798-baef-96f835628278" name="Changes" comment="lobby scene refactoring" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -190,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711028071965</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="lobby scene refactoring">
+      <created>1711029443379</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1711029443379</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +228,8 @@
     <MESSAGE value="added VContainer, injected dependencies for PlayerController using vContainer" />
     <MESSAGE value="refactor" />
     <MESSAGE value="fixed heroes spawner, added new flash scene" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed heroes spawner, added new flash scene" />
+    <MESSAGE value="lobby scene refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="lobby scene refactoring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
