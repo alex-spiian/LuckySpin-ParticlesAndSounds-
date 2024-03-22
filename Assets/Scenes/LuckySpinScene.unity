@@ -6266,8 +6266,9 @@ GameObject:
   - component: {fileID: 181804933}
   - component: {fileID: 181804932}
   - component: {fileID: 181804934}
+  - component: {fileID: 181804935}
   m_Layer: 5
-  m_Name: Heart_2
+  m_Name: Life_2
   m_TagString: Heart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6353,6 +6354,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 167.16, y: 50, z: 1}
   m_Center: {x: 4.49, y: 0, z: 0}
+--- !u!114 &181804935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181804930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b1d15b456c4a38aa6bc2c6ba24435c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RewardType>k__BackingField: 2
+  <CardType>k__BackingField: 0
+  <Amount>k__BackingField: 1
+  _darkModeController: {fileID: 0}
 --- !u!1 &190390252
 GameObject:
   m_ObjectHideFlags: 0
@@ -6818,7 +6835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c4ad14095d54968bd04632e46f845ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _settingsKeeper:
+  wheelConfig:
     _minRotationDurationBorder: 3
     _maxRotationDurationBorder: 4
     _minRotationSpeedBorder: 3
@@ -7010,6 +7027,7 @@ GameObject:
   - component: {fileID: 346475926}
   - component: {fileID: 346475925}
   - component: {fileID: 346475927}
+  - component: {fileID: 346475928}
   m_Layer: 5
   m_Name: Gem_2
   m_TagString: Gem
@@ -7097,6 +7115,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 168.41, y: 50, z: 1}
   m_Center: {x: 4.2, y: 0, z: 0}
+--- !u!114 &346475928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346475923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b1d15b456c4a38aa6bc2c6ba24435c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RewardType>k__BackingField: 1
+  <CardType>k__BackingField: 0
+  <Amount>k__BackingField: 2
+  _darkModeController: {fileID: 0}
 --- !u!1 &406688078
 GameObject:
   m_ObjectHideFlags: 0
@@ -7244,6 +7278,7 @@ GameObject:
   - component: {fileID: 408403377}
   - component: {fileID: 408403376}
   - component: {fileID: 408403378}
+  - component: {fileID: 408403379}
   m_Layer: 5
   m_Name: Rune
   m_TagString: Rune
@@ -7331,6 +7366,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 170.06, y: 50, z: 1}
   m_Center: {x: -4.3, y: 0, z: 0}
+--- !u!114 &408403379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408403374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b1d15b456c4a38aa6bc2c6ba24435c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RewardType>k__BackingField: 3
+  <CardType>k__BackingField: 0
+  <Amount>k__BackingField: 1
+  _darkModeController: {fileID: 0}
 --- !u!1 &458739460
 GameObject:
   m_ObjectHideFlags: 0
@@ -12424,7 +12475,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1383927639}
         m_TargetAssemblyTypeName: ChestAnimationsController, Assembly-CSharp
-        m_MethodName: OpenChest
+        m_MethodName: Open
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12522,6 +12573,7 @@ GameObject:
   - component: {fileID: 519813463}
   - component: {fileID: 519813462}
   - component: {fileID: 519813464}
+  - component: {fileID: 519813465}
   m_Layer: 5
   m_Name: Skeleton
   m_TagString: Skeleton
@@ -12609,6 +12661,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 168.48, y: 50, z: 1}
   m_Center: {x: -3.9, y: 0, z: 0}
+--- !u!114 &519813465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519813460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b1d15b456c4a38aa6bc2c6ba24435c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RewardType>k__BackingField: 4
+  <CardType>k__BackingField: 1
+  <Amount>k__BackingField: 0
+  _darkModeController: {fileID: 0}
 --- !u!1 &528218268
 GameObject:
   m_ObjectHideFlags: 0
@@ -22775,6 +22843,7 @@ GameObject:
   - component: {fileID: 587587031}
   - component: {fileID: 587587030}
   - component: {fileID: 587587032}
+  - component: {fileID: 587587033}
   m_Layer: 5
   m_Name: Gem
   m_TagString: Gem
@@ -22862,6 +22931,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 167.16, y: 50, z: 1}
   m_Center: {x: 4.3, y: 0, z: 0}
+--- !u!114 &587587033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587587028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b1d15b456c4a38aa6bc2c6ba24435c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RewardType>k__BackingField: 1
+  <CardType>k__BackingField: 0
+  <Amount>k__BackingField: 2
+  _darkModeController: {fileID: 0}
 --- !u!1 &611838533
 GameObject:
   m_ObjectHideFlags: 0
@@ -39673,6 +39758,7 @@ GameObject:
   - component: {fileID: 965088870}
   - component: {fileID: 965088869}
   - component: {fileID: 965088871}
+  - component: {fileID: 965088872}
   m_Layer: 5
   m_Name: Gold
   m_TagString: Gold
@@ -39760,6 +39846,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 169.01, y: 50, z: 1}
   m_Center: {x: -4.44, y: 0, z: 0}
+--- !u!114 &965088872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965088867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b1d15b456c4a38aa6bc2c6ba24435c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RewardType>k__BackingField: 0
+  <CardType>k__BackingField: 0
+  <Amount>k__BackingField: 50
+  _darkModeController: {fileID: 0}
 --- !u!1 &965332426
 GameObject:
   m_ObjectHideFlags: 0
@@ -39903,6 +40005,7 @@ GameObject:
   - component: {fileID: 978434218}
   - component: {fileID: 978434217}
   - component: {fileID: 978434219}
+  - component: {fileID: 978434220}
   m_Layer: 5
   m_Name: Gold_2
   m_TagString: Gold
@@ -39990,6 +40093,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 168.99, y: 50, z: 1}
   m_Center: {x: -4.1, y: 0, z: 0}
+--- !u!114 &978434220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978434215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b1d15b456c4a38aa6bc2c6ba24435c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RewardType>k__BackingField: 0
+  <CardType>k__BackingField: 0
+  <Amount>k__BackingField: 50
+  _darkModeController: {fileID: 0}
 --- !u!1 &979990747
 GameObject:
   m_ObjectHideFlags: 0
@@ -40339,14 +40458,14 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1039340459}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1383927639}
         m_TargetAssemblyTypeName: ChestAnimationsController, Assembly-CSharp
-        m_MethodName: HideChest
+        m_MethodName: Hide
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -45430,6 +45549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c460f6534b6b46dc8b8cd925c93a4acd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _collider: {fileID: 1116151336}
 --- !u!1 &1123371648
 GameObject:
   m_ObjectHideFlags: 0
@@ -50729,12 +50849,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fe4ea755b38435d961a29cfd56c07af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cards:
-  - {fileID: 127219596}
-  - {fileID: 1860313994}
-  - {fileID: 540971697}
-  - {fileID: 895991991}
-  - {fileID: 1880731826}
+  _rewards:
+  - {fileID: 127219603}
+  - {fileID: 1860314001}
+  - {fileID: 540971704}
+  - {fileID: 895991998}
+  - {fileID: 1880731833}
   _arrowController: {fileID: 1116151338}
 --- !u!1 &1313365930
 GameObject:
@@ -51495,6 +51615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d08a27730a164a268f7bd8a5c32b072, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _chest: {fileID: 1383927641}
   _darkScreenMode: {fileID: 1123371652}
   _audioSource: {fileID: 1383927640}
   _chestAnimator: {fileID: 1383927638}
@@ -58399,8 +58520,9 @@ GameObject:
   - component: {fileID: 1932362148}
   - component: {fileID: 1932362147}
   - component: {fileID: 1932362149}
+  - component: {fileID: 1932362150}
   m_Layer: 5
-  m_Name: Heart
+  m_Name: Life
   m_TagString: Heart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58486,6 +58608,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 167.16, y: 50, z: 1}
   m_Center: {x: 4.3, y: 0, z: 0}
+--- !u!114 &1932362150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932362145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b1d15b456c4a38aa6bc2c6ba24435c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RewardType>k__BackingField: 2
+  <CardType>k__BackingField: 0
+  <Amount>k__BackingField: 1
+  _darkModeController: {fileID: 0}
 --- !u!1 &1934798491
 GameObject:
   m_ObjectHideFlags: 0
@@ -63439,10 +63577,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5e977d4873d243ae935c951dabb7c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _goldCount: {fileID: 979990749}
-  _gemsCount: {fileID: 729084820}
-  _lifesCount: {fileID: 1322455380}
-  _mysteryCardsCount: {fileID: 129527773}
+  _labels:
+  - View: {fileID: 979990749}
+    ReawardType: 0
+  - View: {fileID: 729084820}
+    ReawardType: 1
+  - View: {fileID: 1322455380}
+    ReawardType: 2
+  - View: {fileID: 129527773}
+    ReawardType: 3
+  _chest: {fileID: 1383927641}
 --- !u!4 &1969051210
 Transform:
   m_ObjectHideFlags: 0
@@ -63727,12 +63871,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wheelRotator: {fileID: 245912196}
-  prizeCardsController: {fileID: 1218606153}
+  rewardsController: {fileID: 1218606153}
   _spinAnimationsController: {fileID: 740847888}
   _chestAnimationsController: {fileID: 1383927639}
   _auraController: {fileID: 1934798495}
   _spinsCountView: {fileID: 1694125772}
-  _prizesView: {fileID: 1969051209}
+  rewardsView: {fileID: 1969051209}
   _moneyView: {fileID: 1697558307}
 --- !u!4 &2068164378
 Transform:

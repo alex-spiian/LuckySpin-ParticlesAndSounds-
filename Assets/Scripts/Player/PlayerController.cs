@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using DefaultNamespace;
+using Events;
 using Player;
+using Reward;
 using UnityEngine;
 using UnityEngine.Serialization;
 using VContainer;
@@ -13,12 +15,14 @@ public class PlayerController
     public Wallet Wallet { get; private set; }
     private int _spinsCount;
     private PlayerConfig _playerConfig;
+    private IDisposable _subscription;
 
     [Inject]
     public void Construct(PlayerConfig playerConfig)
     {
         _playerConfig = playerConfig;
         OnSpinsCountChanged?.Invoke();
+        _subscription = EventStreams.Global.Subscribe<RewardsWereClaimedEvent>(OnRewardsWereClaimed);
     }
 
     public void SpendSpin()
@@ -37,12 +41,6 @@ public class PlayerController
         Wallet.SpendGold(hero.Price);
     }
 
-    public void UpdateWonPrizesValue()
-    {
-        Wallet.AddGold(PlayerPrefs.GetInt(PlayerPrefsNames.WON + PlayerPrefsNames.GOLD) * GlobalConstants.GOLD_MULTIPLICATOR);
-        Wallet.AddGems(PlayerPrefs.GetInt(PlayerPrefsNames.WON + PlayerPrefsNames.GEM) * GlobalConstants.GEMS_MULTIPLICATOR);
-    }
-
     public void SetDefaultInformation()
     {
         PlayerPrefs.SetFloat(PlayerPrefsNames.GOLD, _playerConfig.StartGoldValue);
@@ -59,6 +57,24 @@ public class PlayerController
             PlayerPrefs.GetFloat(PlayerPrefsNames.GEM));
         
         _spinsCount = PlayerPrefs.GetInt(PlayerPrefsNames.SPINS);
+    }
+    
+    private void OnRewardsWereClaimed(RewardsWereClaimedEvent rewardsWereClaimedEvent)
+    {
+        var rewards = rewardsWereClaimedEvent.Rewards;
+
+        foreach (var reward in rewards)
+        {
+            if (reward.RewardType == RewardTypes.Gold)
+            {
+                Wallet.AddGold(reward.Amount);
+            }
+            
+            if (reward.RewardType == RewardTypes.Gem)
+            {
+                Wallet.AddGems(reward.Amount);
+            }
+        }
     }
     
 }

@@ -6,9 +6,8 @@ using Random = UnityEngine.Random;
 namespace FortuneWheel
 {
     [Serializable]
-    public class SettingsKeeper
+    public class WheelConfig
     {
-        
         [SerializeField] private float _minRotationDurationBorder;
         [SerializeField] private float _maxRotationDurationBorder;
         
@@ -20,7 +19,6 @@ namespace FortuneWheel
         public float GetRandomSpeedRotation()
         {
             return Random.Range(_minRotationSpeedBorder, _maxRotationSpeedBorder);
-
         }
 
         public float GetRandomRotationDuration()

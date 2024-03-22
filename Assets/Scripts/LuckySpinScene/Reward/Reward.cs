@@ -28,8 +28,11 @@ namespace Reward
             Debug.Log("StopAnimationPlaying");
 
 
+            Debug.Log("this card type = " + CardType);
+            Debug.Log("won card type = " + CardTypes.Prize);
             if (CardType != CardTypes.Prize) return;
             
+            Debug.Log("EventStreams.Global.Publish(new RewardWasGotEvent(this));");
             EventStreams.Global.Publish(new RewardWasGotEvent(this));
 
             var currentWonAmount = PlayerPrefs.GetInt(PlayerPrefsNames.WON + gameObject.tag);

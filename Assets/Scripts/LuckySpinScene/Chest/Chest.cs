@@ -23,10 +23,9 @@ namespace Chest
         {
             var reward = rewardWasGotEvent.Reward;
             
-            if (_rewards.Contains(reward)) return;
             _rewards.Add(reward);
-            _animationsController.ScaleChest();
-            _animationsController.ChestToTheMiddle();
+            _animationsController.PunchScale();
+            _animationsController.MoveToMiddle();
         }
 
         public int GetRewardValue(RewardTypes type)
@@ -34,6 +33,10 @@ namespace Chest
             return _rewards.Where(reward => reward.RewardType == type).Sum(reward => reward.Amount);
         }
 
+        public void OnChestClosed()
+        {
+            EventStreams.Global.Publish(new RewardsWereClaimedEvent(_rewards));
+        }
         private void OnDestroy()
         {
             _subscriptions?.Dispose();
