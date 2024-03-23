@@ -1,8 +1,9 @@
 using System;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace DefaultNamespace.SceneController
+namespace SceneController
 {
     public class SceneController : MonoBehaviour
     {

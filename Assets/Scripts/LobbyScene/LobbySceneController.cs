@@ -1,5 +1,4 @@
 using DefaultNamespace;
-using DefaultNamespace.SceneController;
 using Hero;
 using UnityEngine;
 using VContainer;
